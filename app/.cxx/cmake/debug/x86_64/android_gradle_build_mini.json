@@ -1,0 +1,22 @@
+{
+  "buildFiles": [
+    "D:\\Android\\Old_NDKs\\android-ndk-r17c\\build\\cmake\\android.toolchain.cmake",
+    "D:\\Android\\Workspace\\TuneURL\\app\\src\\main\\cpp\\CMakeLists.txt"
+  ],
+  "cleanCommands": [
+    "D:\\Android\\Sdk\\cmake\\3.10.2.4988404\\bin\\ninja.exe -C \"D:\\Android\\Workspace\\TuneURL\\app\\.cxx\\cmake\\debug\\x86_64\" clean"
+  ],
+  "buildTargetsCommand": "D:\\Android\\Sdk\\cmake\\3.10.2.4988404\\bin\\ninja.exe  -C \"D:\\Android\\Workspace\\TuneURL\\app\\.cxx\\cmake\\debug\\x86_64\" {LIST_OF_TARGETS_TO_BUILD}",
+  "libraries": {
+    "native-lib-Debug-x86_64": {
+      "artifactName": "native-lib",
+      "buildCommand": "D:\\Android\\Sdk\\cmake\\3.10.2.4988404\\bin\\ninja.exe -C \"D:\\Android\\Workspace\\TuneURL\\app\\.cxx\\cmake\\debug\\x86_64\" native-lib",
+      "abi": "x86_64",
+      "output": "D:\\Android\\Workspace\\TuneURL\\app\\build\\intermediates\\cmake\\debug\\obj\\x86_64\\libnative-lib.so",
+      "runtimeFiles": [
+        "D:\\Android\\Old_NDKs\\android-ndk-r17c\\sources\\cxx-stl\\llvm-libc++\\libs\\x86_64\\libc++_static.a",
+        "D:\\Android\\Old_NDKs\\android-ndk-r17c\\sources\\cxx-stl\\llvm-libc++\\libs\\x86_64\\libc++abi.a"
+      ]
+    }
+  }
+}

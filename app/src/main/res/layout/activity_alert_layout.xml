@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent">
+
+	<RelativeLayout
+		android:id="@+id/result_layout"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:background="#11FFFFFF"
+		android:visibility="invisible">
+
+		<ImageView android:id="@+id/logo_splash"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:src="@drawable/logo_splash"
+			android:scaleX="0.7"
+			android:scaleY="0.7"
+			android:layout_centerInParent="true"/>
+
+		<View android:id="@+id/overlay_yes"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:background="#800FAC79" />
+
+		<View android:id="@+id/overlay_no"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:background="#80A5692D" />
+
+	</RelativeLayout>
+
+	<RelativeLayout
+		android:id="@+id/choice_layout"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent">
+	
+		<com.dekidea.tuneurl.view.SurfaceViewObject
+			android:id="@+id/swipe_pad"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:padding="0dip"
+			android:layout_margin="0dip"
+			android:background="@drawable/main_selector"/>
+
+		<ImageView android:id="@+id/save_logo"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:src="@drawable/save"
+			android:layout_alignParentLeft="true"
+			android:layout_centerVertical="true"/>
+
+		<ImageView android:id="@+id/save_arrows"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:src="@drawable/save_arrows"
+			android:layout_alignParentLeft="true"
+			android:layout_centerVertical="true"/>
+
+		<TextView android:id="@+id/save_label"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="@string/save_label"
+			android:textColor="#FFFFFF"
+			android:gravity="center"
+			android:textSize="20sp"
+			android:layout_below="@id/save_arrows"
+			android:layout_alignRight="@id/save_arrows"/>
+
+		<ImageView android:id="@+id/ignore_logo"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:src="@drawable/ignore"
+			android:layout_alignParentRight="true"
+			android:layout_centerVertical="true"/>
+
+		<ImageView android:id="@+id/ignore_arrows"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:src="@drawable/ignore_arrows"
+			android:layout_alignParentRight="true"
+			android:layout_centerVertical="true"/>
+
+		<TextView android:id="@+id/ignore_label"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="@string/ignore_label"
+			android:textColor="#FFFFFF"
+			android:gravity="center"
+			android:textSize="20sp"
+			android:layout_below="@id/ignore_arrows"
+			android:layout_alignLeft="@id/ignore_arrows"/>
+
+	</RelativeLayout>
+	
+</RelativeLayout>

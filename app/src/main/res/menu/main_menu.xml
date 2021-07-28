@@ -1,0 +1,22 @@
+
+<menu xmlns:android="http://schemas.android.com/apk/res/android" 
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!-- Settings, should always be in the overflow -->
+    <item android:id="@+id/action_home"
+        android:title="@string/homescreen_label"
+        app:showAsAction="never"/>
+
+    <item android:id="@+id/action_saved_info"
+        android:title="@string/saved_info_label"
+        app:showAsAction="never"/>
+
+    <item android:id="@+id/action_settings"
+          android:title="@string/settings_label"
+          app:showAsAction="never"/>
+    
+    <item android:id="@+id/action_about"
+          android:title="@string/about_label"
+          app:showAsAction="never"/>
+
+</menu>

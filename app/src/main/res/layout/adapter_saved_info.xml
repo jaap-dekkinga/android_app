@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content"
+	android:orientation="horizontal"
+	android:background="#FFFFFF">
+	
+    <ImageView android:id="@+id/type_image"
+        android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_alignParentLeft="true"
+		android:layout_alignParentTop="true"
+        android:layout_marginLeft="10dip"/>
+    
+    <ImageView android:id="@+id/share_image"
+        android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_alignParentRight="true"
+		android:layout_alignParentBottom="true"
+		android:src="@drawable/ic_share"
+		android:layout_margin="10dip"/>
+    
+    <TextView android:id="@+id/news_title"
+	    android:layout_width="match_parent"
+	   	android:layout_height="wrap_content"
+	   	android:textSize="14sp"
+	  	android:textColor="#000000"
+	   	android:paddingTop="10dip"
+		android:layout_toRightOf="@id/type_image"
+		android:layout_toLeftOf="@id/share_image"
+		android:layout_alignParentTop="true"/>
+        
+	<TextView android:id="@+id/news_date"
+	    android:layout_width="match_parent"
+	   	android:layout_height="wrap_content"
+	   	android:textSize="12sp"
+	   	android:textColor="#A0A0A0"	   	
+		android:padding="10dip"
+	   	android:layout_below="@id/news_title"
+		android:layout_toLeftOf="@id/share_image"
+		android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"/>
+
+    <TextView android:id="@+id/coupon_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="#FF0000"
+        android:gravity="center"
+        android:layout_centerInParent="true"/>
+
+</RelativeLayout>

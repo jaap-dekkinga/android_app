@@ -1,0 +1,3 @@
+D:/Android/Workspace/TuneURL/app/.cxx/cmake/debug/x86/CMakeFiles/native-lib.dir
+D:/Android/Workspace/TuneURL/app/.cxx/cmake/debug/x86/CMakeFiles/edit_cache.dir
+D:/Android/Workspace/TuneURL/app/.cxx/cmake/debug/x86/CMakeFiles/rebuild_cache.dir

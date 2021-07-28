@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/about_label"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/about_label"
+        android:textSize="20sp"
+        android:gravity="center"
+        android:padding="10dp"
+        android:textColor="@color/title_color"
+        android:background="@color/header_color"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/about_label">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="#E5E5E5"
+            android:layout_below="@id/settings_store_interval_layout"
+            android:padding="20dip"
+            android:layout_marginBottom="1dip">
+
+            <TextView
+                android:id="@+id/privacy_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/privacy_policy_label"
+                android:textColor="#404040"
+                android:textSize="16sp"
+                android:textStyle="bold"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

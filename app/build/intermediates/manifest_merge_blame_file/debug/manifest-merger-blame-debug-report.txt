@@ -1,0 +1,193 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.dekidea.tuneurl"
+4    android:versionCode="33"
+5    android:versionName="1.0.33" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="15"
+8-->D:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml
+9        android:targetSdkVersion="29" />
+9-->D:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml
+10
+11    <uses-permission android:name="android.permission.BLUETOOTH" />
+11-->D:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:5:5-68
+11-->D:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:5:22-65
+12    <uses-permission android:name="android.permission.INTERNET" />
+12-->D:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:6:5-66
+12-->D:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:6:22-64
+13    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+13-->D:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:7:5-78
+13-->D:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:7:22-76
+14
+15    <uses-feature android:name="android.hardware.telephony" />
+15-->D:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:9:5-62
+15-->D:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:9:19-60
+16
+17    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+17-->D:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:10:5-74
+17-->D:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:10:22-72
+18    <uses-permission android:name="android.permission.CALL_PHONE" />
+18-->D:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:11:5-68
+18-->D:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:11:22-66
+19    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+19-->D:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:13:5-71
+19-->D:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:13:22-68
+20    <uses-permission android:name="android.permission.WAKE_LOCK" />
+20-->D:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:15:2-64
+20-->D:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:15:19-62
+21    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+21-->D:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:17:2-77
+21-->D:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:17:19-75
+22    <uses-permission android:name="android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS" />
+22-->D:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:19:5-94
+22-->D:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:19:22-92
+23    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+23-->D:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:21:5-77
+23-->D:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:21:22-74
+24    <uses-permission android:name="android.permission.ACTION_MANAGE_OVERLAY_PERMISSION" />
+24-->D:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:23:5-91
+24-->D:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:23:22-88
+25    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+25-->D:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:24:5-78
+25-->D:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:24:22-75
+26    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+26-->D:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:26:5-80
+26-->D:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:26:22-77
+27
+28    <application
+28-->D:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:28:5-108:19
+29        android:name="com.dekidea.tuneurl.App"
+29-->D:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:29:9-47
+30        android:allowBackup="false"
+30-->D:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:32:9-36
+31        android:debuggable="true"
+32        android:icon="@mipmap/ic_launcher"
+32-->D:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:30:9-43
+33        android:label="@string/app_name"
+33-->D:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:31:9-41
+34        android:testOnly="true"
+35        android:usesCleartextTraffic="true" >
+35-->D:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:33:9-44
+36
+37        <!-- android:requestLegacyExternalStorage="true" -->
+38
+39        <activity
+39-->D:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:36:9-50:20
+40            android:name="com.dekidea.tuneurl.activity.MainActivity"
+40-->D:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:36:19-75
+41            android:allowTaskReparenting="false"
+41-->D:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:41:13-49
+42            android:label="@string/app_name"
+42-->D:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:37:13-45
+43            android:launchMode="singleTask"
+43-->D:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:39:13-44
+44            android:screenOrientation="portrait"
+44-->D:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:40:13-49
+45            android:theme="@style/Theme.AppCompat.NoActionBar" >
+45-->D:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:38:13-63
+46            <intent-filter android:label="@string/app_name" >
+46-->D:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:43:13-48:29
+46-->D:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:43:28-60
+47                <action android:name="android.intent.action.MAIN" />
+47-->D:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:45:17-69
+47-->D:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:45:25-66
+48
+49                <category android:name="android.intent.category.LAUNCHER" />
+49-->D:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:46:17-77
+49-->D:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:46:27-74
+50            </intent-filter>
+51        </activity>
+52        <activity
+52-->D:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:52:9-59:20
+53            android:name="com.dekidea.tuneurl.activity.AlertActivity"
+53-->D:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:52:19-76
+54            android:allowTaskReparenting="true"
+54-->D:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:57:4-39
+55            android:label="@string/news_alert_label"
+55-->D:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:53:13-53
+56            android:launchMode="singleTask"
+56-->D:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:55:13-44
+57            android:screenOrientation="portrait"
+57-->D:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:56:13-49
+58            android:theme="@android:style/Theme.NoTitleBar" >
+58-->D:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:54:13-60
+59        </activity>
+60
+61        <service android:name="com.dekidea.tuneurl.service.SoundListenerService" />
+61-->D:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:61:9-83
+61-->D:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:61:18-81
+62        <service
+62-->D:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:63:9-132
+63            android:name="com.dekidea.tuneurl.service.MediaProjectionServer"
+63-->D:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:63:66-130
+64            android:foregroundServiceType="mediaProjection" />
+64-->D:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:63:18-65
+65        <service android:name="com.dekidea.tuneurl.service.SoundMatchingService" />
+65-->D:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:65:9-83
+65-->D:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:65:18-81
+66        <service android:name="com.dekidea.tuneurl.service.APIService" />
+66-->D:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:67:9-73
+66-->D:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:67:18-71
+67        <service android:name="com.dekidea.tuneurl.service.AutorunService" />
+67-->D:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:69:9-77
+67-->D:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:69:18-75
+68        <service
+68-->D:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:71:9-74:19
+69            android:name="com.dekidea.tuneurl.service.AutorunJobService"
+69-->D:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:71:18-78
+70            android:exported="true"
+70-->D:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:73:13-36
+71            android:permission="android.permission.BIND_JOB_SERVICE" >
+71-->D:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:72:13-69
+72        </service>
+73
+74        <receiver android:name="com.dekidea.tuneurl.receiver.ConnectivityChangeReceiver" >
+74-->D:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:77:9-85:14
+74-->D:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:77:19-89
+75            <intent-filter>
+75-->D:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:79:4-83:20
+76                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+76-->D:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:81:5-66
+76-->D:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:81:13-64
+77            </intent-filter>
+78        </receiver>
+79        <receiver android:name="com.dekidea.tuneurl.receiver.BootCompletedReceiver" >
+79-->D:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:87:9-96:14
+79-->D:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:87:19-84
+80            <intent-filter>
+80-->D:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:89:4-94:20
+81                <action android:name="android.intent.action.BOOT_COMPLETED" />
+81-->D:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:91:5-66
+81-->D:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:91:13-64
+82
+83                <category android:name="android.intent.category.HOME" />
+83-->D:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:92:5-60
+83-->D:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:92:15-58
+84            </intent-filter>
+85        </receiver>
+86        <receiver android:name="com.dekidea.tuneurl.receiver.CallReceiver" >
+86-->D:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:98:9-106:20
+86-->D:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:98:19-75
+87            <intent-filter android:priority="999" >
+87-->D:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:100:13-104:29
+87-->D:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:100:28-50
+88                <action android:name="android.intent.action.PHONE_STATE" />
+88-->D:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:102:17-75
+88-->D:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:102:25-73
+89            </intent-filter>
+90        </receiver>
+91
+92        <provider
+92-->[android.arch.lifecycle:extensions:1.1.1] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\e82df37e644869abde55b8ff81ffeca4\extensions-1.1.1\AndroidManifest.xml:23:9-27:43
+93            android:name="android.arch.lifecycle.ProcessLifecycleOwnerInitializer"
+93-->[android.arch.lifecycle:extensions:1.1.1] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\e82df37e644869abde55b8ff81ffeca4\extensions-1.1.1\AndroidManifest.xml:24:13-83
+94            android:authorities="com.dekidea.tuneurl.lifecycle-trojan"
+94-->[android.arch.lifecycle:extensions:1.1.1] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\e82df37e644869abde55b8ff81ffeca4\extensions-1.1.1\AndroidManifest.xml:25:13-68
+95            android:exported="false"
+95-->[android.arch.lifecycle:extensions:1.1.1] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\e82df37e644869abde55b8ff81ffeca4\extensions-1.1.1\AndroidManifest.xml:26:13-37
+96            android:multiprocess="true" />
+96-->[android.arch.lifecycle:extensions:1.1.1] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\e82df37e644869abde55b8ff81ffeca4\extensions-1.1.1\AndroidManifest.xml:27:13-40
+97    </application>
+98
+99</manifest>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+	<style name="My.Button" parent="android:style/Widget.Material.Button">
+	    <item name="android:background">@color/button_color</item>
+	    <item name="android:padding">10dip</item>
+	    <item name="android:textSize">18sp</item>
+	</style>
+
+	<style name="CustomAlertDialog" parent="Theme.AppCompat.Light.Dialog.Alert">
+		<item name="android:windowBackground">@drawable/popup_background</item>
+	</style>
+
+</resources>
