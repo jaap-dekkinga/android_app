@@ -34,10 +34,19 @@ import android.support.v4.provider.DocumentFile;
 
 public class SoundMatchingService extends IntentService implements Constants {
 	
-	private static final int RECORDER_BPP = 16;
-	private static final int TRIGGER_SAMPLE_RATE = 44100;
-	private static final int AUDIO_LABEL_SAMPLE_RATE = 10240;
-	
+	private final int RECORDER_BPP = 16;
+	private final int TRIGGER_SAMPLE_RATE = 44100;
+	private final int AUDIO_LABEL_SAMPLE_RATE = 10240;
+
+	private final int RECORDING_TRIGGER_INTERVAL_IN_MILLIS = 1450;
+	private final int AUDIO_LABEL_SIZE_MILLIS = 4500;
+	private final int RECORDING_AUDIO_LABEL_INTERVAL_IN_MILLIS = 4900;
+
+	private final int AUDIO_LABEL_STANDARD_FILE_SIZE = (int)((double)AUDIO_LABEL_SAMPLE_RATE * ((double)RECORDER_BPP / 8d) * ((double)AUDIO_LABEL_SIZE_MILLIS / 1000d));
+
+	private final float SIMILARITY_TRESHOLD = 0.22F;
+
+
 	private int mTriggerBufferSize = 0;
 	private int mAudioLabelBufferSize = 0;
 
@@ -53,7 +62,6 @@ public class SoundMatchingService extends IntentService implements Constants {
 	private long mStartTime;
 	private long mStartRecordingTime;
 
-	private DocumentFile mDirectory;
 
 	static {
 
@@ -477,6 +485,7 @@ public class SoundMatchingService extends IntentService implements Constants {
 	private void writeAudioLabelDataToFile(File file){
 
 		DataOutputStream output = null;
+		int file_size = 0;
 
 		try {
 
@@ -490,13 +499,22 @@ public class SoundMatchingService extends IntentService implements Constants {
 
 				int len = mAudioLabelRecorder.read(byteBuffer, 1024);
 
-				if(len > 0) {
+				if(len > 0 && file_size < AUDIO_LABEL_STANDARD_FILE_SIZE) {
+
+					if(len > (AUDIO_LABEL_STANDARD_FILE_SIZE - file_size)){
+
+						len = AUDIO_LABEL_STANDARD_FILE_SIZE - file_size;
+					}
 
 					byte[] byte_array = byteBuffer.array();
 
 					output.write(byte_array, 0, len);
+
+					file_size = file_size + len;
 				}
 			}
+
+			System.out.println("raw file size: " + file_size);
 		}
 		catch (Exception e) {
 

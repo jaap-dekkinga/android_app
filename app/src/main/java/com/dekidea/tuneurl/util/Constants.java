@@ -53,11 +53,6 @@ public interface Constants {
 
     public static final int MIC_POLL_INTERVAL = 100;
     public static final int DEFAULT_SOUND_THRESHOLD = 82;
-    //public static final int RECORDING_TRIGGER_INTERVAL_IN_MILLIS = 2170;
-    public static final int RECORDING_TRIGGER_INTERVAL_IN_MILLIS = 1450;
-    public static final int RECORDING_AUDIO_LABEL_INTERVAL_IN_MILLIS = 4500;
-
-    public static final float SIMILARITY_TRESHOLD = 0.22F;
 
     public static final String SETTING_SOUND_THRESHOLD = "sound_threshold";
     public static final String SETTING_RUNNING_STATE= "running_state";

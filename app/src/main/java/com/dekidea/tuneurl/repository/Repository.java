@@ -472,7 +472,7 @@ public class Repository implements Constants {
 
         if(data != null) {
 
-            String action = data.getDescription();
+            String action = data.getType();
             String date = data.getDate();
 
             System.out.println("Repository.doAction(): " + action);
