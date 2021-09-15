@@ -10,8 +10,8 @@ android {
         applicationId "com.dekidea.tuneurl"
         minSdkVersion 15
         targetSdkVersion 29
-        versionCode 33
-        versionName "1.0.33"
+        versionCode 35
+        versionName "1.0.35"
 
         externalNativeBuild {
             cmake {

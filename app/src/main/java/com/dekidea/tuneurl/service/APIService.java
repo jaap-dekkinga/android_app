@@ -79,7 +79,7 @@ public class APIService extends IntentService implements Constants {
 
 					JsonObject fingerprint = new JsonObject();
 
-					fingerprint.add("fingerPrint", buffer);
+					fingerprint.add("fingerprint", buffer);
 
 					repo.searchFingerprint(this.getApplicationContext(), fingerprint);
 				}

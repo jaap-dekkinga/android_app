@@ -39,8 +39,8 @@ public class SoundMatchingService extends IntentService implements Constants {
 	private final int AUDIO_LABEL_SAMPLE_RATE = 10240;
 
 	private final int RECORDING_TRIGGER_INTERVAL_IN_MILLIS = 1450;
-	private final int AUDIO_LABEL_SIZE_MILLIS = 4500;
-	private final int RECORDING_AUDIO_LABEL_INTERVAL_IN_MILLIS = 4900;
+	private final int AUDIO_LABEL_SIZE_MILLIS = 5000;
+	private final int RECORDING_AUDIO_LABEL_SAFETY_INTERVAL_IN_MILLIS = 400;
 
 	private final int AUDIO_LABEL_STANDARD_FILE_SIZE = (int)((double)AUDIO_LABEL_SAMPLE_RATE * ((double)RECORDER_BPP / 8d) * ((double)AUDIO_LABEL_SIZE_MILLIS / 1000d));
 
@@ -472,7 +472,7 @@ public class SoundMatchingService extends IntentService implements Constants {
 				};
 
 				Timer timer = new Timer();
-				timer.schedule(timerTask, RECORDING_AUDIO_LABEL_INTERVAL_IN_MILLIS);
+				timer.schedule(timerTask, AUDIO_LABEL_SIZE_MILLIS + RECORDING_AUDIO_LABEL_SAFETY_INTERVAL_IN_MILLIS);
 			}
 		}
 		catch (Exception e){

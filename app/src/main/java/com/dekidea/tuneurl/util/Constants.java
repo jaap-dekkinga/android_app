@@ -114,14 +114,9 @@ public interface Constants {
     public static final int AUDIO_FILE_MODE = 1;
     public static final int AUDIO_FILE_QUALITY = 0;
 
-    public static final int AUDIO_FILE_CREATED = 0;
-    public static final int AUDIO_FILE_SENT = 1;
-
     public static final long SWIPE_WAIT_TIME = 10000L;
 
-    //public static final String AUDIO_FILE_ID = "audio_file_id";
-    //public static final String AUDIO_FILE_NAME = "audio_file_name";
-    public static final String AUDIO_FILE_PATH = "audio_file_name";
+    public static final String AUDIO_FILE_PATH = "audio_file_path";
     public static final String USER_RESPONSE = "user_response";
     public static final String USER_RESPONSE_NO = "no";
     public static final String USER_RESPONSE_YES = "yes";
