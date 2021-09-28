@@ -23,9 +23,6 @@ public class MainFragment extends Fragment implements Constants {
     private Switch mOnOffSwitch;
     private TextView mOnOffLabel;
 
-    private Switch mInternalAudioSwitch;
-    private TextView mInternalAudioLabel;
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
@@ -33,14 +30,6 @@ public class MainFragment extends Fragment implements Constants {
 
         mOnOffSwitch = (Switch)rootView.findViewById(R.id.on_off_switch);
         mOnOffLabel = (TextView)rootView.findViewById(R.id.on_off_label);
-
-        mInternalAudioSwitch = (Switch)rootView.findViewById(R.id.internal_audio_switch);
-        mInternalAudioLabel = (TextView)rootView.findViewById(R.id.internal_audio_label);
-        if (Build.VERSION.SDK_INT < Build.VERSION_CODES.Q) {
-
-            mInternalAudioLabel.setVisibility(View.GONE);
-            mInternalAudioSwitch.setVisibility(View.GONE);
-        }
 
         mOnOffSwitch.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener(){
 
@@ -69,31 +58,6 @@ public class MainFragment extends Fragment implements Constants {
                 }
             }});
 
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
-
-            mInternalAudioSwitch.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-
-                @Override
-                public void onCheckedChanged(CompoundButton buttonView,
-                                             boolean isChecked) {
-                    // TODO Auto-generated method stub
-
-                    if(mMainActivity != null){
-
-                        if(isChecked){
-
-                            mMainActivity.showPlaybackCaptureAlert();
-                        }
-                        else{
-
-                            mMainActivity.stopScreenCaptureService();
-                        }
-                    }
-                }
-            });
-        }
-
-
         if(mMainActivity != null){
 
             displayStatus(mMainActivity.getRunningState());
@@ -102,15 +66,12 @@ public class MainFragment extends Fragment implements Constants {
         return rootView;
     }
 
+
     public void setMainActivity(MainActivity activity){
 
         mMainActivity = activity;
     }
 
-    public void displayInternalAudioStatus(boolean active){
-
-        mInternalAudioSwitch.setChecked(active);
-    }
 
     public void displayStatus(int running_state){
 

@@ -14,6 +14,7 @@ import android.os.PersistableBundle;
 import com.dekidea.tuneurl.R;
 import com.dekidea.tuneurl.service.AutorunJobService;
 import com.dekidea.tuneurl.service.AutorunService;
+import com.dekidea.tuneurl.service.SoundListenerService;
 
 import org.joda.time.Instant;
 import java.util.Calendar;
@@ -495,5 +496,34 @@ public class TimeUtils implements Constants {
         }
 
         return threshold;
+    }
+
+
+    public static void doAutomaticStart(Context context){
+
+        System.out.println("TimeUtils.doAutomaticStart()");
+
+        try {
+
+            long latency = 5000;
+            PersistableBundle extras = new PersistableBundle();
+            extras.putInt(ACTION, ACTION_START_LISTENING);
+
+            ComponentName serviceComponent = new ComponentName(context, AutorunJobService.class);
+            JobInfo.Builder builder = new JobInfo.Builder(123321, serviceComponent);
+            builder.setMinimumLatency(latency); // wait at least
+            builder.setOverrideDeadline(latency + 1000); // maximum delay
+            builder.setExtras(extras);
+
+            //builder.setRequiredNetworkType(JobInfo.NETWORK_TYPE_UNMETERED); // require unmetered network
+            //builder.setRequiresDeviceIdle(true); // device should be idle
+            //builder.setRequiresCharging(false); // we don't care if the device is charging or not
+            JobScheduler jobScheduler = context.getSystemService(JobScheduler.class);
+            jobScheduler.schedule(builder.build());
+        }
+        catch (Exception e){
+
+            e.printStackTrace();
+        }
     }
 }

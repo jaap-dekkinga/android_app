@@ -8,10 +8,10 @@ android {
     defaultConfig {
 
         applicationId "com.dekidea.tuneurl"
-        minSdkVersion 15
-        targetSdkVersion 29
-        versionCode 35
-        versionName "1.0.35"
+        minSdkVersion 30
+        targetSdkVersion 30
+        versionCode 39
+        versionName "1.0.39"
 
         externalNativeBuild {
             cmake {
@@ -50,6 +50,8 @@ dependencies {
 
     // ViewModel and LiveData
     implementation "android.arch.lifecycle:extensions:1.1.1"
+    implementation 'com.android.support:appcompat-v7:28.0.0'
+    implementation 'com.android.support.constraint:constraint-layout:2.0.4'
     //implementation 'com.android.support:documentfile:28.0.0'
 
     annotationProcessor "android.arch.lifecycle:compiler:1.1.1"
@@ -81,7 +83,7 @@ dependencies {
 
     implementation 'com.github.ronaldsmartin:Material-ViewPagerIndicator:1.0.4'
 
-    //implementation 'javax.json:javax.json-api:1.1'
-
     implementation 'commons-io:commons-io:2.6'
+
+    implementation 'com.github.ashqal:android-libresample:0.3.0'
 }

@@ -5,10 +5,12 @@ import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.KeyguardManager;
 import android.content.BroadcastReceiver;
+import android.content.ComponentName;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.IntentFilter;
+import android.content.ServiceConnection;
 import android.media.AudioPlaybackCaptureConfiguration;
 import android.media.projection.MediaProjection;
 import android.media.projection.MediaProjectionManager;
@@ -16,6 +18,7 @@ import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
+import android.os.IBinder;
 import android.os.Looper;
 import android.support.annotation.RequiresApi;
 import android.support.v4.app.Fragment;
@@ -248,27 +251,18 @@ public class MainActivity extends FragmentActivity implements Constants {
         Settings.updateIntSetting(mContext, SETTING_RUNNING_STATE, SETTING_RUNNING_STATE_STOPPED);
 
         Settings.stopListeningService(mContext);
-        Settings.stopMatchingService(mContext);
 
         FileUtils.deleteCacheSoundFiles(mContext);
 
         mAutorunStarted = false;
 
         displayStatus(mRunningState);
-
-        displayInternalAudioStatus(false);
     }
 
 
     private void displayStatus(int running_state) {
 
         ((MainFragment) mFragments.get(MAIN_PAGE_INDEX)).displayStatus(running_state);
-    }
-
-
-    private void displayInternalAudioStatus(boolean active) {
-
-        ((MainFragment) mFragments.get(MAIN_PAGE_INDEX)).displayInternalAudioStatus(active);
     }
 
 

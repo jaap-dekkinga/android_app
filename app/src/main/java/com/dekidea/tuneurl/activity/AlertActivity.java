@@ -67,6 +67,8 @@ public class AlertActivity extends Activity implements Constants, RecognitionLis
 		
 		mContext = this;
 
+		Settings.stopRecorder(mContext);
+
 		mTuneURL_ID = getIntent().getLongExtra(TUNEURL_ID, -1);
 		mDate = getIntent().getStringExtra(DATE);
 
@@ -150,22 +152,45 @@ public class AlertActivity extends Activity implements Constants, RecognitionLis
 
         stopSpeechListener();
 
+		Settings.startListening(this);
+
 		mVisibility = View.INVISIBLE;
 		
 		mRunningState = Settings.fetchIntSetting(mContext, SETTING_RUNNING_STATE, SETTING_RUNNING_STATE_STOPPED);
-
+/*
 		if (mRunningState == SETTING_RUNNING_STATE_STARTED) {
-			
+
 			int listening_state = Settings.fetchIntSetting(mContext, SETTING_LISTENING_STATE, SETTING_LISTENING_STATE_STOPPED);
-			
+
 			if(listening_state == SETTING_LISTENING_STATE_STOPPED) {
 
                 if (!this.isFinishing()) {
 
-                    Settings.startListening(this);
+
                 }
             }
         }
+
+ */
+
+		TimerTask timerTask = new TimerTask() {
+
+			public void run() {
+
+				if (mRunningState == SETTING_RUNNING_STATE_STARTED) {
+
+					int listening_state = Settings.fetchIntSetting(mContext, SETTING_LISTENING_STATE, SETTING_LISTENING_STATE_STOPPED);
+
+					if(listening_state == SETTING_LISTENING_STATE_STOPPED) {
+
+						Settings.startListening(mContext);
+					}
+				}
+			}
+		};
+
+		Timer timer = new Timer();
+		timer.schedule(timerTask, 1000);
 	}
 	
 	
@@ -493,6 +518,8 @@ public class AlertActivity extends Activity implements Constants, RecognitionLis
                 speech.cancel();
 
                 speech.destroy();
+
+				speech = null;
             }
             catch (Exception e) {
 

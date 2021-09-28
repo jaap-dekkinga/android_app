@@ -1,12 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.dekidea.tuneurl"
-    android:versionCode="35"
-    android:versionName="1.0.35" >
+    android:versionCode="39"
+    android:versionName="1.0.39" >
 
     <uses-sdk
-        android:minSdkVersion="15"
-        android:targetSdkVersion="29" />
+        android:minSdkVersion="30"
+        android:targetSdkVersion="30" />
+    <!-- suppress AndroidElementNotAllowed -->
+    <queries>
+        <intent>
+            <action android:name="android.speech.RecognitionService" />
+        </intent>
+    </queries>
 
     <uses-permission android:name="android.permission.BLUETOOTH" />
     <uses-permission android:name="android.permission.INTERNET" />
@@ -16,6 +22,7 @@
 
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
     <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.PROCESS_OUTGOING_CALLS" />
     <uses-permission android:name="android.permission.RECORD_AUDIO" />
     <uses-permission android:name="android.permission.WAKE_LOCK" />
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
@@ -28,14 +35,15 @@
     <application
         android:name="com.dekidea.tuneurl.App"
         android:allowBackup="false"
+        android:appComponentFactory="android.support.v4.app.CoreComponentFactory"
         android:debuggable="true"
+        android:extractNativeLibs="false"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:testOnly="true"
         android:usesCleartextTraffic="true" >
 
         <!-- android:requestLegacyExternalStorage="true" -->
-
         <activity
             android:name="com.dekidea.tuneurl.activity.MainActivity"
             android:allowTaskReparenting="false"
@@ -55,21 +63,21 @@
             android:label="@string/news_alert_label"
             android:launchMode="singleTask"
             android:screenOrientation="portrait"
-            android:theme="@android:style/Theme.NoTitleBar" >
-        </activity>
+            android:theme="@android:style/Theme.NoTitleBar" />
 
-        <service android:name="com.dekidea.tuneurl.service.SoundListenerService" />
+        <service
+            android:name="com.dekidea.tuneurl.service.SoundListenerService"
+            android:exported="true"
+            android:permission="android.permission.RECORD_AUDIO" />
         <service
             android:name="com.dekidea.tuneurl.service.MediaProjectionServer"
             android:foregroundServiceType="mediaProjection" />
-        <service android:name="com.dekidea.tuneurl.service.SoundMatchingService" />
         <service android:name="com.dekidea.tuneurl.service.APIService" />
         <service android:name="com.dekidea.tuneurl.service.AutorunService" />
         <service
             android:name="com.dekidea.tuneurl.service.AutorunJobService"
             android:exported="true"
-            android:permission="android.permission.BIND_JOB_SERVICE" >
-        </service>
+            android:permission="android.permission.BIND_JOB_SERVICE" />
 
         <receiver android:name="com.dekidea.tuneurl.receiver.ConnectivityChangeReceiver" >
             <intent-filter>
@@ -88,6 +96,7 @@
                 <action android:name="android.intent.action.PHONE_STATE" />
             </intent-filter>
         </receiver>
+        <receiver android:name="com.dekidea.tuneurl.receiver.HeadsetReceiver" />
 
         <provider
             android:name="android.arch.lifecycle.ProcessLifecycleOwnerInitializer"

@@ -1,6 +1,6 @@
 {
   "abi": "ARMEABI_V7A",
-  "abiPlatformVersion": 15,
+  "abiPlatformVersion": 28,
   "buildSettings": {
     "environmentVariables": []
   },
@@ -45,7 +45,7 @@
         },
         {
           "name": "ANDROID_PLATFORM",
-          "value": "android-15"
+          "value": "android-28"
         },
         {
           "name": "CMAKE_ANDROID_ARCH_ABI",
@@ -73,7 +73,7 @@
         },
         {
           "name": "CMAKE_SYSTEM_VERSION",
-          "value": "15"
+          "value": "28"
         }
       ]
     }

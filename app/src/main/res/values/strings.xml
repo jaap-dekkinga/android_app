@@ -1,101 +1,101 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">TuneURL</string>
-    
+
     <string name="ok">OK</string>
-	<string name="cancel">Cancel</string>
-	<string name="yes">Yes</string>
-	<string name="no">No</string>
-	<string name="loading">Loading \u2026</string>
-    
+    <string name="cancel">Cancel</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="loading">Loading \u2026</string>
+
     <string name="listening_service_label">TuneURL is running</string>
-	<string name="homescreen_label">Homescreen</string>
-	<string name="saved_info_label">Saved info</string>
+    <string name="homescreen_label">Homescreen</string>
+    <string name="saved_info_label">Saved info</string>
     <string name="settings_label">Settings</string>
     <string name="about_label">About</string>
     <string name="privacy_policy_label">Privacy policy</string>
     <string name="news_alert_label">News alert</string>
-	<string name="start">Start</string>
-	<string name="stop">Stop</string>
-	<string name="swipes_label">Swipe to save or ignore</string>
-	<string name="save_label">YES</string>
-	<string name="ignore_label">NO</string>
-	<string name="left_swipes_label">Left swipes</string>
-	<string name="right_swipes_label">Right swipes</string>
-	<string name="sound_sensibility_label">Sound threshold</string>
-	<string name="setting_store_interval_title">Store info</string>
-	<string name="setting_timezone_title">Timezone</string>
-	<string name="setting_autorun_title">Autorun app during commute time</string>
-	<string name="set_autorun_interval_title">Autorun interval</string>
-	<string name="set_autorun_start">Start</string>
-	<string name="set_autorun_end">End</string>
-	<string name="dash">-</string>
-	<string name="setting_ingnore_battery_title">Ignore battery optimizations</string>
-	<string name="alert_no_network_connection_title">No connection</string>
-	<string name="alert_no_network_connection_message">Please enable your network data connection</string>
-	<string name="news_list_button_label">Go to saved info</string>
-	<string name="on_label">ON</string>
-	<string name="off_label">OFF</string>
-	
-	<string name="permissions_record_audio">Record audio</string>
-	<string name="permissions_storage">Storage</string>
-	<string name="permissions_wake_lock">Wake device</string>
-	<string name="permissions_internet">Internet</string>
-	<string name="permissions_access_network_state">Network state</string>
-	<string name="permissions_boot_completed">Boot completed</string>
-	<string name="permissions_call_phone">Call phone</string>
+    <string name="start">Start</string>
+    <string name="stop">Stop</string>
+    <string name="swipes_label">Swipe to save or ignore</string>
+    <string name="save_label">YES</string>
+    <string name="ignore_label">NO</string>
+    <string name="left_swipes_label">Left swipes</string>
+    <string name="right_swipes_label">Right swipes</string>
+    <string name="sound_sensibility_label">Sound threshold</string>
+    <string name="setting_store_interval_title">Store info</string>
+    <string name="setting_timezone_title">Timezone</string>
+    <string name="setting_autorun_title">Autorun app during commute time</string>
+    <string name="set_autorun_interval_title">Autorun interval</string>
+    <string name="set_autorun_start">Start</string>
+    <string name="set_autorun_end">End</string>
+    <string name="dash">-</string>
+    <string name="setting_ingnore_battery_title">Ignore battery optimizations</string>
+    <string name="alert_no_network_connection_title">No connection</string>
+    <string name="alert_no_network_connection_message">Please enable your network data connection</string>
+    <string name="news_list_button_label">Go to saved info</string>
+    <string name="on_label">ON</string>
+    <string name="off_label">OFF</string>
+
+    <string name="permissions_record_audio">Record audio</string>
+    <string name="permissions_storage">Storage</string>
+    <string name="permissions_wake_lock">Wake device</string>
+    <string name="permissions_internet">Internet</string>
+    <string name="permissions_access_network_state">Network state</string>
+    <string name="permissions_boot_completed">Boot completed</string>
+    <string name="permissions_call_phone">Call phone</string>
     <string name="permissions_ignore_battery_optimizations">Ignore battery optimizations</string>
-	<string name="permissions_system_alert_window">Draw over other apps</string>
+    <string name="permissions_system_alert_window">Draw over other apps</string>
 
-	<string name="alert_overlay_permission_title_1">Allow </string>
-	<string name="alert_overlay_permission_title_2">to show over other apps?</string>
+    <string name="alert_overlay_permission_title_1">Allow </string>
+    <string name="alert_overlay_permission_title_2">to show over other apps?</string>
 
-	<string name="alert_permissions_title">TuneURL Permissions</string>
-	<string name="alert_permissions_message">\nIn order for TuneURL to work correctly, the app requires the permissions above\n\nPlease hit the \"Allow\" button and confirm that you are happy to grant the required permissions</string>
-	<string name="alert_permissions_message2">\nTuneURL needs permission to be shown on top of other apps, otherwise it cannot function properly\n</string>
+    <string name="alert_permissions_title">TuneURL Permissions</string>
+    <string name="alert_permissions_message">\nIn order for TuneURL to work correctly, the app requires the permissions above\n\nPlease hit the \"Allow\" button and confirm that you are happy to grant the required permissions</string>
+    <string name="alert_permissions_message2">\nTuneURL needs permission to be shown on top of other apps, otherwise it cannot function properly\n</string>
 
-	<string name="alert_permissions_allow">Allow</string>
-	<string name="alert_permissions_deny">Deny</string>
+    <string name="alert_permissions_allow">Allow</string>
+    <string name="alert_permissions_deny">Deny</string>
 
-	<string name="alert_permissions_denied_title">Denied Permissions</string>
-	<string name="alert_permissions_denied_message">\nYou have chosen to deny access to the above features. TuneURL will not work properly</string>
-	<string name="notification_permissions_missing_title">TuneURL permissions missing</string>
-	<string name="notification_permissions_missing_message">TuneURL will not function correctly</string>
+    <string name="alert_permissions_denied_title">Denied Permissions</string>
+    <string name="alert_permissions_denied_message">\nYou have chosen to deny access to the above features. TuneURL will not work properly</string>
+    <string name="notification_permissions_missing_title">TuneURL permissions missing</string>
+    <string name="notification_permissions_missing_message">TuneURL will not function correctly</string>
 
-	<string name="setting_api_url_title">API URL</string>
+    <string name="setting_api_url_title">API URL</string>
 
-	<string name="malformed_url_message">URL is not valid</string>
+    <string name="malformed_url_message">URL is not valid</string>
 
     <string name="coupon_dialog_title">Please confirm</string>
     <string name="coupon_dialog_message">Do you want to use this coupon?</string>
     <string name="used">USED</string>
 
-	<string name="headset_connected">Headset connected</string>
-	<string name="headset_disconnected">Headset disconnected</string>
-	<string name="headset_dialog_message">TuneURL has been stopped automatically\n\nYou need to start TuneURL manually</string>
+    <string name="headset_connected">Headset connected</string>
+    <string name="headset_disconnected">Headset disconnected</string>
+    <string name="headset_dialog_message">TuneURL has been stopped automatically\n\nYou need to start TuneURL manually</string>
 
-	<string name="could_not_create_audio_record_object">Could not create AudioRecord object</string>
+    <string name="could_not_create_audio_record_object">Could not create AudioRecord object</string>
 
-	<string name="screen_capturing_service_label">TuneURL is capturing screen content</string>
-	<string name="cannot_capture_internal_audio">Cannot capture internal audio</string>
+    <string name="screen_capturing_service_label">TuneURL is capturing screen content</string>
+    <string name="cannot_capture_internal_audio">Cannot capture internal audio</string>
 
-	<string name="internal_audio_label">Use internal audio</string>
-	
-	<string-array name="setting_store_interval_values">	    
-	    
-	    <item>24 hours</item>
-	    <item>1 week</item>	
-	    <item>For infinite time</item>    
-	    
-	</string-array>
-	
-	<string-array name="setting_timezone_values">	    
-	    
-	    <item>EST</item>
-	    <item>CMT</item>
-	    <item>PST</item>
-	    <item>Use phone settings</item>
-	    
-	</string-array>
-	
+    <string name="internal_audio_label">Use internal audio</string>
+
+    <string-array name="setting_store_interval_values">
+
+        <item>24 hours</item>
+        <item>1 week</item>
+        <item>For infinite time</item>
+
+    </string-array>
+
+    <string-array name="setting_timezone_values">
+
+        <item>EST</item>
+        <item>CMT</item>
+        <item>PST</item>
+        <item>Use phone settings</item>
+
+    </string-array>
+
 </resources>

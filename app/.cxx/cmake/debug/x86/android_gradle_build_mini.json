@@ -15,8 +15,7 @@
       "output": "D:\\Android\\Workspace\\TuneURL\\app\\build\\intermediates\\cmake\\debug\\obj\\x86\\libnative-lib.so",
       "runtimeFiles": [
         "D:\\Android\\Old_NDKs\\android-ndk-r17c\\sources\\cxx-stl\\llvm-libc++\\libs\\x86\\libc++_static.a",
-        "D:\\Android\\Old_NDKs\\android-ndk-r17c\\sources\\cxx-stl\\llvm-libc++\\libs\\x86\\libc++abi.a",
-        "D:\\Android\\Old_NDKs\\android-ndk-r17c\\sources\\cxx-stl\\llvm-libc++\\libs\\x86\\libandroid_support.a"
+        "D:\\Android\\Old_NDKs\\android-ndk-r17c\\sources\\cxx-stl\\llvm-libc++\\libs\\x86\\libc++abi.a"
       ]
     }
   }

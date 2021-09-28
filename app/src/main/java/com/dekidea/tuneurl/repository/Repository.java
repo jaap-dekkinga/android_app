@@ -420,16 +420,11 @@ public class Repository implements Constants {
 
             String UserID = android.provider.Settings.Secure.getString(context.getContentResolver(), android.provider.Settings.Secure.ANDROID_ID);
 
-            System.out.println("UserID = " + UserID);
-            System.out.println("date = " + date);
-
             RecordOfInterest rof = new RecordOfInterest(UserID, date, TuneURL_ID, Interest_action);
             String json_rof = new Gson().toJson(rof);
             JsonObject jsonObject = new JsonParser().parse(json_rof).getAsJsonObject();
             JsonArray json_array = new JsonArray();
             json_array.add(jsonObject);
-
-            System.out.println("json_array = " + json_array.toString());
 
             webservice.addRecordOfInterest(INTERESTS_API_URL, json_array).enqueue(new Callback<JsonObject>() {
 

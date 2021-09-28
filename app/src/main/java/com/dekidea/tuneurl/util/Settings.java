@@ -14,9 +14,11 @@ import android.os.Build;
 import com.dekidea.tuneurl.api.APIData;
 import com.dekidea.tuneurl.service.MediaProjectionServer;
 import com.dekidea.tuneurl.service.SoundListenerService;
-import com.dekidea.tuneurl.service.SoundMatchingService;
 
 import static android.content.Context.MODE_PRIVATE;
+
+import java.util.Timer;
+import java.util.TimerTask;
 
 public class Settings implements Constants{
 
@@ -116,7 +118,6 @@ public class Settings implements Constants{
         try {
 
             Intent i = new Intent(context, SoundListenerService.class);
-            i.putExtra(ACTION, ACTION_START_SERVICE);
 
             if (Build.VERSION.SDK_INT > 25) {
 
@@ -143,29 +144,8 @@ public class Settings implements Constants{
         try {
 
             Intent i = new Intent(context, SoundListenerService.class);
-            i.putExtra(ACTION, ACTION_STOP_SERVICE);
 
-            context.startService(i);
-        }
-        catch (Exception e){
-
-            e.printStackTrace();
-        }
-
-        stopScreenCaptureService(context);
-    }
-
-
-    public static void stopMatchingService(Context context) {
-
-        System.out.println("Settings.stopMatchingService()");
-
-        try {
-
-            Intent i = new Intent(context, SoundMatchingService.class);
-            i.putExtra(ACTION, ACTION_STOP_SERVICE);
-
-            context.startService(i);
+            context.stopService(i);
         }
         catch (Exception e){
 
@@ -180,10 +160,11 @@ public class Settings implements Constants{
 
         try {
 
-            Intent i = new Intent(context, SoundListenerService.class);
+            Intent i = new Intent();
+            i.setAction(LISTENING_ACTION);
             i.putExtra(ACTION, ACTION_START_LISTENING);
 
-            context.startService(i);
+            context.sendBroadcast(i);
         }
         catch (Exception e){
 
@@ -198,10 +179,30 @@ public class Settings implements Constants{
 
         try {
 
-            Intent i = new Intent(context, SoundListenerService.class);
+            Intent i = new Intent();
+            i.setAction(LISTENING_ACTION);
             i.putExtra(ACTION, ACTION_STOP_LISTENING);
 
-            context.startService(i);
+            context.sendBroadcast(i);
+        }
+        catch (Exception e){
+
+            e.printStackTrace();
+        }
+    }
+
+
+    public static void stopRecorder(Context context) {
+
+        System.out.println("Settings.stopRecorder()");
+
+        try {
+
+            Intent i = new Intent();
+            i.setAction(LISTENING_ACTION);
+            i.putExtra(ACTION, ACTION_STOP_RECORDER);
+
+            context.sendBroadcast(i);
         }
         catch (Exception e){
 
@@ -215,6 +216,7 @@ public class Settings implements Constants{
         SharedPreferences sp = context.getApplicationContext().getSharedPreferences(SHARED_PREFERENCES, MODE_PRIVATE);
         return (sp.getInt(setting, default_value));
     }
+
 
     public static void updateIntSetting(Context context, String setting, int value){
 

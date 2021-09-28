@@ -57,6 +57,10 @@ public class AutorunJobService extends JobService implements Constants {
 
                 TimeUtils.scheduleAutomaticStart(this);
             }
+            else if(action == ACTION_START_LISTENING){
+
+                Settings.startListeningService(this);
+            }
         }
         catch (Exception e){
 

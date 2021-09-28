@@ -4,6 +4,8 @@ import com.dekidea.tuneurl.R;
 
 public interface Constants {
 
+    public static final int FINGERPRINT_MATCHING_THRESHOLD = 20;
+
     public static final String SETTING_API_URL = "api_url";
 
     //public static final String TUNEURL_API_BASE_URL = "http://34.208.97.117";
@@ -21,8 +23,9 @@ public interface Constants {
     public static final String VERSION_CODE = "VERSION_CODE";
 
     public static final String ACTION = "action";
+    public static final String LISTENING_ACTION = "com.dekidea.tuneurl.LISTENING_ACTION";
     public static final int ACTION_STOP_SERVICE = 0;
-    public static final int ACTION_START_SERVICE = 1;
+    public static final int ACTION_STOP_SERVICE_FOR_CALL = 1;
     public static final int ACTION_STOP_LISTENING = 2;
     public static final int ACTION_START_LISTENING = 3;
     public static final int ACTION_GET_DATA_FIRST_RUN = 4;
@@ -33,6 +36,7 @@ public interface Constants {
     public static final int ACTION_DO_ACTION = 9;
     public static final int ACTION_ADD_RECORD_OF_INTEREST = 10;
     public static final int ACTION_SEARCH_FINGERPRINT = 11;
+    public static final int ACTION_STOP_RECORDER = 12;
 
     public static final String MESSAGE_APP_STATUS_CHANGED = "com.appcountry.soundalert.APP_STATUS_CHANGED";
     public static final String MESSAGE = "message";
@@ -48,17 +52,19 @@ public interface Constants {
     public static final String RECORDED_TRIGGER_FILE = "recorded_trigger.wav";
     public static final String RECORDED_TRIGGER_TEMP_FILE = "recorded_trigger_temp.raw";
     public static final String RECORDED_TEMP_FILE = "recorded_temp.raw";
-    public static final String[] REFERENCE_FILES = new String[]{"trigger_audio_1.wav"};
-    public static final int[] REFERENCE_RAW_RESOURCES = new int[]{R.raw.trigger_audio_1};
 
-    public static final int MIC_POLL_INTERVAL = 100;
-    public static final int DEFAULT_SOUND_THRESHOLD = 82;
+    //public static final String[] REFERENCE_FILES = new String[]{"trigger_audio_1.wav"};
+    //public static final int[] REFERENCE_RAW_RESOURCES = new int[]{R.raw.trigger_audio_1};
+
+    public static final String[] REFERENCE_FILES = new String[]{"trigger_audio.raw"};
+    public static final int[] REFERENCE_RAW_RESOURCES = new int[]{R.raw.trigger_audio};
 
     public static final String SETTING_SOUND_THRESHOLD = "sound_threshold";
     public static final String SETTING_RUNNING_STATE= "running_state";
 
     public static final int SETTING_RUNNING_STATE_STOPPED = 0;
     public static final int SETTING_RUNNING_STATE_STARTED = 1;
+    public static final int SETTING_RUNNING_STATE_STOPPED_FOR_CALL = 2;
 
     public static final String SETTING_LISTENING_STATE= "listening_state";
 
@@ -142,6 +148,7 @@ public interface Constants {
     public static final int AUTORUN_STOP_JOB_ID = 1;
 
     public static final String AUTORUN_STARTED = "autorun_started";
+    public static final String AUTORUN_STARTED_2 = "autorun_started_2";
 
     public static final String INTEREST_ACTION_HEARD = "heard";
     public static final String INTEREST_ACTION_INTERESTED = "interested";
@@ -157,6 +164,4 @@ public interface Constants {
     public static final int HEADSET_PLUGGED = 1;
 
     public static final String AUDIO_SOURCE = "audio_source";
-
-    public static final int FINGERPRINT_MATCHING_THRESHOLD = 3;
 }

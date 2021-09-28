@@ -10,6 +10,7 @@ import android.telephony.TelephonyManager;
 import com.dekidea.tuneurl.activity.MainActivity;
 import com.dekidea.tuneurl.util.Constants;
 import com.dekidea.tuneurl.util.Settings;
+import com.dekidea.tuneurl.util.TimeUtils;
 
 import java.util.Timer;
 import java.util.TimerTask;
@@ -22,6 +23,8 @@ public class CallReceiver extends BroadcastReceiver implements Constants {
 
     @Override
     public void onReceive(Context context, Intent intent) {
+
+        System.out.println("CallReceiver.onReceive()");
 
         mContext = context;
 
@@ -63,16 +66,7 @@ public class CallReceiver extends BroadcastReceiver implements Constants {
 
                     if(running_state == SETTING_RUNNING_STATE_STARTED){
 
-                        TimerTask timerTask = new TimerTask() {
-
-                            public void run() {
-
-                                Settings.startListening(mContext);
-                            }
-                        };
-
-                        Timer timer = new Timer();
-                        timer.schedule(timerTask, 2000);
+                        Settings.startListening(mContext);
                     }
 
                     break;

@@ -71,5 +71,5 @@ endif()
 
 
 set(CMAKE_CXX_IMPLICIT_LINK_LIBRARIES "m;gcc;gcc;dl;c;gcc;gcc;dl")
-set(CMAKE_CXX_IMPLICIT_LINK_DIRECTORIES "D:/Android/Old_NDKs/android-ndk-r17c/sources/cxx-stl/llvm-libc++/libs/x86;D:/Android/Old_NDKs/android-ndk-r17c/toolchains/llvm/prebuilt/windows-x86_64/lib64/clang/6.0.2/lib/linux/i386;D:/Android/Old_NDKs/android-ndk-r17c/toolchains/x86-4.9/prebuilt/windows-x86_64/lib/gcc/i686-linux-android/4.9.x;D:/Android/Old_NDKs/android-ndk-r17c/toolchains/x86-4.9/prebuilt/windows-x86_64/i686-linux-android/lib;D:/Android/Old_NDKs/android-ndk-r17c/platforms/android-15/arch-x86/usr/lib")
+set(CMAKE_CXX_IMPLICIT_LINK_DIRECTORIES "D:/Android/Old_NDKs/android-ndk-r17c/sources/cxx-stl/llvm-libc++/libs/x86;D:/Android/Old_NDKs/android-ndk-r17c/toolchains/llvm/prebuilt/windows-x86_64/lib64/clang/6.0.2/lib/linux/i386;D:/Android/Old_NDKs/android-ndk-r17c/toolchains/x86-4.9/prebuilt/windows-x86_64/lib/gcc/i686-linux-android/4.9.x;D:/Android/Old_NDKs/android-ndk-r17c/toolchains/x86-4.9/prebuilt/windows-x86_64/i686-linux-android/lib;D:/Android/Old_NDKs/android-ndk-r17c/platforms/android-28/arch-x86/usr/lib")
 set(CMAKE_CXX_IMPLICIT_LINK_FRAMEWORK_DIRECTORIES "")
