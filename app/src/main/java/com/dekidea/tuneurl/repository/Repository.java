@@ -414,13 +414,13 @@ public class Repository implements Constants {
     }
 
 
-    public void addRecordOfInterest(Context context, String TuneURL_ID, String Interest_action, String date) {
+    public void addRecordOfInterest(Context context, String TuneURL_ID, String interest_action, String date) {
 
         try{
 
             String UserID = android.provider.Settings.Secure.getString(context.getContentResolver(), android.provider.Settings.Secure.ANDROID_ID);
 
-            RecordOfInterest rof = new RecordOfInterest(UserID, date, TuneURL_ID, Interest_action);
+            RecordOfInterest rof = new RecordOfInterest(UserID, date, TuneURL_ID, interest_action);
             String json_rof = new Gson().toJson(rof);
             JsonObject jsonObject = new JsonParser().parse(json_rof).getAsJsonObject();
             JsonArray json_array = new JsonArray();

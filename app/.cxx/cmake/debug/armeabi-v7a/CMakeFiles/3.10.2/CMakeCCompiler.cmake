@@ -69,5 +69,5 @@ endif()
 
 
 set(CMAKE_C_IMPLICIT_LINK_LIBRARIES "gcc;dl;c;gcc;dl")
-set(CMAKE_C_IMPLICIT_LINK_DIRECTORIES "D:/Android/Old_NDKs/android-ndk-r17c/sources/cxx-stl/llvm-libc++/libs/armeabi-v7a;D:/Android/Old_NDKs/android-ndk-r17c/toolchains/llvm/prebuilt/windows-x86_64/lib64/clang/6.0.2/lib/linux/arm;D:/Android/Old_NDKs/android-ndk-r17c/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/armv7-a/thumb;D:/Android/Old_NDKs/android-ndk-r17c/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64/arm-linux-androideabi/lib/armv7-a/thumb;D:/Android/Old_NDKs/android-ndk-r17c/platforms/android-28/arch-arm/usr/lib")
+set(CMAKE_C_IMPLICIT_LINK_DIRECTORIES "D:/Android/Old_NDKs/android-ndk-r17c/sources/cxx-stl/llvm-libc++/libs/armeabi-v7a;D:/Android/Old_NDKs/android-ndk-r17c/toolchains/llvm/prebuilt/windows-x86_64/lib64/clang/6.0.2/lib/linux/arm;D:/Android/Old_NDKs/android-ndk-r17c/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/armv7-a/thumb;D:/Android/Old_NDKs/android-ndk-r17c/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64/arm-linux-androideabi/lib/armv7-a/thumb;D:/Android/Old_NDKs/android-ndk-r17c/platforms/android-27/arch-arm/usr/lib")
 set(CMAKE_C_IMPLICIT_LINK_FRAMEWORK_DIRECTORIES "")

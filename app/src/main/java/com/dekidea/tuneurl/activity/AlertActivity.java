@@ -60,12 +60,16 @@ public class AlertActivity extends Activity implements Constants, RecognitionLis
     private long mTuneURL_ID;
 	private String mDate;
 
+	private boolean mSwipeWasRegistered;
+
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		
 		super.onCreate(savedInstanceState);
 		
 		mContext = this;
+
+		mSwipeWasRegistered = false;
 
 		Settings.stopRecorder(mContext);
 
@@ -150,9 +154,11 @@ public class AlertActivity extends Activity implements Constants, RecognitionLis
 		
 		super.onPause();
 
+		System.out.println("onPause()");
+
         stopSpeechListener();
 
-		Settings.startListening(this);
+		//Settings.startListening(this);
 
 		mVisibility = View.INVISIBLE;
 		
@@ -173,24 +179,10 @@ public class AlertActivity extends Activity implements Constants, RecognitionLis
 
  */
 
-		TimerTask timerTask = new TimerTask() {
+		if (!mSwipeWasRegistered && mRunningState == SETTING_RUNNING_STATE_STARTED) {
 
-			public void run() {
-
-				if (mRunningState == SETTING_RUNNING_STATE_STARTED) {
-
-					int listening_state = Settings.fetchIntSetting(mContext, SETTING_LISTENING_STATE, SETTING_LISTENING_STATE_STOPPED);
-
-					if(listening_state == SETTING_LISTENING_STATE_STOPPED) {
-
-						Settings.startListening(mContext);
-					}
-				}
-			}
-		};
-
-		Timer timer = new Timer();
-		timer.schedule(timerTask, 1000);
+			Settings.startListening(mContext);
+		}
 	}
 	
 	
@@ -204,6 +196,8 @@ public class AlertActivity extends Activity implements Constants, RecognitionLis
 
 
 	public void registerSwipe(int swipe_type){
+
+		mSwipeWasRegistered = true;
 
 		if(mRunningState == SETTING_RUNNING_STATE_STARTED && mVisibility == View.VISIBLE){
 
@@ -220,7 +214,7 @@ public class AlertActivity extends Activity implements Constants, RecognitionLis
 				addRecordOfInterest(INTEREST_ACTION_INTERESTED);
 			}
 
-			doAction(user_response);
+			final String final_user_response = user_response;
 
 			showResult(swipe_type);
 
@@ -228,6 +222,8 @@ public class AlertActivity extends Activity implements Constants, RecognitionLis
 			TimerTask timerTask = new TimerTask() {
 				@Override
 				public void run() {
+
+					doAction(final_user_response);
 
 					moveTaskToBack(true);
 

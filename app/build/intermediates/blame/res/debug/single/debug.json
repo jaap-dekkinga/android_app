@@ -32,12 +32,12 @@
         "source": "D:\\Android\\Workspace\\TuneURL\\app\\src\\main\\res\\drawable-hdpi\\ic_launcher_small.png"
     },
     {
-        "merged": "D:\\Android\\Workspace\\TuneURL\\app\\build\\intermediates\\res\\merged\\debug\\drawable_missing.png.flat",
-        "source": "D:\\Android\\Workspace\\TuneURL\\app\\src\\main\\res\\drawable\\missing.png"
-    },
-    {
         "merged": "D:\\Android\\Workspace\\TuneURL\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_launcher_small.png.flat",
         "source": "D:\\Android\\Workspace\\TuneURL\\app\\src\\main\\res\\drawable-mdpi\\ic_launcher_small.png"
+    },
+    {
+        "merged": "D:\\Android\\Workspace\\TuneURL\\app\\build\\intermediates\\res\\merged\\debug\\drawable_missing.png.flat",
+        "source": "D:\\Android\\Workspace\\TuneURL\\app\\src\\main\\res\\drawable\\missing.png"
     },
     {
         "merged": "D:\\Android\\Workspace\\TuneURL\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",

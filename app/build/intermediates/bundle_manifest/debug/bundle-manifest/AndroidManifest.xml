@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.dekidea.tuneurl"
-    android:versionCode="39"
-    android:versionName="1.0.39" >
+    android:versionCode="40"
+    android:versionName="1.0.40" >
 
     <uses-sdk
-        android:minSdkVersion="30"
+        android:minSdkVersion="27"
         android:targetSdkVersion="30" />
     <!-- suppress AndroidElementNotAllowed -->
     <queries>

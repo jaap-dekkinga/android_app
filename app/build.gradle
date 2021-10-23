@@ -8,10 +8,10 @@ android {
     defaultConfig {
 
         applicationId "com.dekidea.tuneurl"
-        minSdkVersion 30
+        minSdkVersion 27
         targetSdkVersion 30
-        versionCode 39
-        versionName "1.0.39"
+        versionCode 40
+        versionName "1.0.40"
 
         externalNativeBuild {
             cmake {
