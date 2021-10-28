@@ -2,8 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.dekidea.tuneurl"
     android:targetSandboxVersion="2"
-    android:versionCode="40"
-    android:versionName="1.0.40" >
+    android:versionCode="41"
+    android:versionName="1.0.41" >
 
     <uses-sdk
         android:minSdkVersion="27"
@@ -23,7 +23,6 @@
 
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
     <uses-permission android:name="android.permission.CALL_PHONE" />
-    <uses-permission android:name="android.permission.PROCESS_OUTGOING_CALLS" />
     <uses-permission android:name="android.permission.RECORD_AUDIO" />
     <uses-permission android:name="android.permission.WAKE_LOCK" />
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
@@ -92,7 +91,16 @@
                 <category android:name="android.intent.category.HOME" />
             </intent-filter>
         </receiver>
-        <receiver android:name="com.dekidea.tuneurl.receiver.CallReceiver" >
+
+        <!--
+        <receiver android:name=".receiver.CallReceiver">
+            <intent-filter android:priority="999">
+                <action android:name="android.intent.action.PHONE_STATE" />
+            </intent-filter>
+        </receiver>
+        -->
+
+        <receiver android:name="com.dekidea.tuneurl.receiver.PhoneStateReceiver" >
             <intent-filter android:priority="999" >
                 <action android:name="android.intent.action.PHONE_STATE" />
             </intent-filter>
