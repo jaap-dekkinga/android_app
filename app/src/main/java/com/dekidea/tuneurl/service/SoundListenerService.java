@@ -109,7 +109,8 @@ public class SoundListenerService extends Service implements Constants {
 	}
 
 
-	
+	byte[] referenceTriggerArray;
+
 	private void initializeResources(){
 
 		try {
@@ -123,6 +124,10 @@ public class SoundListenerService extends Service implements Constants {
 			referenceTriggerByteBuffer = ByteBuffer.allocateDirect(FINGERPRINT_TRIGGER_BUFFER_SIZE);
 			referenceTriggerByteBuffer.order(ByteOrder.LITTLE_ENDIAN);
 			Channels.newChannel(inputStream).read(referenceTriggerByteBuffer);
+
+			referenceTriggerByteBuffer.rewind();
+			referenceTriggerArray = new byte[referenceTriggerByteBuffer.remaining()];
+			referenceTriggerByteBuffer.get(referenceTriggerArray);
 
 			resampledTriggerByteBuffer = ByteBuffer.allocateDirect(FINGERPRINT_TRIGGER_BUFFER_SIZE);
 			resampledTriggerByteBuffer.order(ByteOrder.LITTLE_ENDIAN);
@@ -578,6 +583,56 @@ public class SoundListenerService extends Service implements Constants {
 
 		System.out.println("SoundListenerService.checkTriggerFingerprint()");
 
+		Resample resample = null;
+
+		try {
+
+			triggerByteBuffer.rewind();
+
+			resampledTriggerByteBuffer.clear();
+
+			referenceTriggerByteBuffer.clear();
+			referenceTriggerByteBuffer.put(referenceTriggerArray);
+			referenceTriggerByteBuffer.rewind();
+
+			resample = new Resample();
+			resample.create(RECORDING_SAMPLE_RATE, FINGERPRINT_SAMPLE_RATE, 2048, 1);
+
+			int output_len = resample.resampleEx(triggerByteBuffer, resampledTriggerByteBuffer, triggerByteBuffer.remaining());
+
+			if(output_len > 0) {
+
+				mSimilarity = getSimilarity(referenceTriggerByteBuffer, (int)(FINGERPRINT_TRIGGER_BUFFER_SIZE/2), resampledTriggerByteBuffer, (int)(FINGERPRINT_TRIGGER_BUFFER_SIZE/2));
+
+				System.out.println("TuneURL - similarity: " + mSimilarity);
+
+				if (mSimilarity < SIMILARITY_THRESHOLD) {
+
+					mRecorderState = LISTENING;
+				}
+			}
+		}
+		catch (Exception e) {
+
+			e.printStackTrace();
+		}
+		finally {
+
+			if(resample != null){
+
+				try {
+
+					resample.destroy();
+				}
+				catch (Exception e){
+
+					e.printStackTrace();
+				}
+			}
+		}
+
+		/*
+
 		try {
 
 			Resample resample = new Resample();
@@ -613,6 +668,8 @@ public class SoundListenerService extends Service implements Constants {
 		referenceTriggerByteBuffer.rewind();
 		resampledTriggerByteBuffer.clear();
 		resampledTriggerByteBuffer.order(ByteOrder.LITTLE_ENDIAN);
+
+		 */
 	}
 
 
@@ -620,6 +677,63 @@ public class SoundListenerService extends Service implements Constants {
 
 		System.out.println("SoundListenerService.searchTuneUrlFingerprint()");
 
+		Resample resample = null;
+
+		try {
+
+			tuneUrlByteBuffer.rewind();
+			resampledTuneUrlByteBuffer.clear();
+
+			resample = new Resample();
+			resample.create(RECORDING_SAMPLE_RATE, FINGERPRINT_SAMPLE_RATE, 2048, 1);
+
+			int output_len = resample.resampleEx(tuneUrlByteBuffer, resampledTuneUrlByteBuffer, tuneUrlByteBuffer.remaining());
+
+			if(output_len <= 0) {
+
+				startListening();
+			}
+			else {
+
+				resampledTuneUrlByteBuffer.rewind();
+
+				String fingerprint_string = extractFingerprintFromByteBuffer(resampledTuneUrlByteBuffer, TUNE_URL_WAVE_LENGHT);
+
+				Intent i = new Intent(this.getApplicationContext(), APIService.class);
+				i.putExtra(ACTION, ACTION_SEARCH_FINGERPRINT);
+				i.putExtra(FINGERPRINT, fingerprint_string);
+				startService(i);
+			}
+		}
+		catch (Exception e){
+
+			e.printStackTrace();
+		}
+		finally {
+
+			if(resample != null){
+
+				try {
+
+					resample.destroy();
+				}
+				catch (Exception e){
+
+					e.printStackTrace();
+				}
+			}
+		}
+
+		try {
+
+			tuneUrlByteBuffer.clear();
+		}
+		catch (Exception e){
+
+			e.printStackTrace();
+		}
+
+		/*
 		try {
 
 			Resample resample = new Resample();
@@ -650,6 +764,8 @@ public class SoundListenerService extends Service implements Constants {
 
 		resampledTuneUrlByteBuffer.clear();
 		resampledTuneUrlByteBuffer.order(ByteOrder.LITTLE_ENDIAN);
+
+		 */
 	}
 
 

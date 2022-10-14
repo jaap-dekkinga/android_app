@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from D:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:2:1-101:12
-INJECTED from D:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:2:1-101:12
-INJECTED from D:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:2:1-101:12
-INJECTED from D:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:2:1-101:12
+ADDED from C:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:2:1-93:12
+INJECTED from C:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:2:1-93:12
+INJECTED from C:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:2:1-93:12
+INJECTED from C:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:2:1-93:12
 MERGED from [android.arch.lifecycle:extensions:1.1.1] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\e82df37e644869abde55b8ff81ffeca4\extensions-1.1.1\AndroidManifest.xml:17:1-30:12
 MERGED from [com.android.support.constraint:constraint-layout:2.0.4] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\eb78d98bc77e12182e6c9865d2d04907\constraint-layout-2.0.4\AndroidManifest.xml:2:1-11:12
 MERGED from [com.google.dagger:dagger-android-support:2.17] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\95da8af43158b9f90646ef6874984ccd\dagger-android-support-2.17\AndroidManifest.xml:17:1-22:12
@@ -12,7 +12,7 @@ MERGED from [android.arch.persistence.room:runtime:1.1.1] C:\Users\PC\.gradle\ca
 MERGED from [com.google.dagger:dagger-android:2.17] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\d8a5446c14b067857c58654ba84a1bed\dagger-android-2.17\AndroidManifest.xml:17:1-22:12
 MERGED from [com.jakewharton:butterknife:8.8.1] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\bae90b9f7ba6b18f10d5a111f5c00bf2\butterknife-8.8.1\AndroidManifest.xml:2:1-7:12
 MERGED from [com.github.bumptech.glide:glide:4.8.0] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\940eb2169f8084e65e0d681d50bd8b9c\glide-4.8.0\AndroidManifest.xml:2:1-12:12
-MERGED from [com.github.ronaldsmartin:Material-ViewPagerIndicator:1.0.4] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\c0ed3b9d3513dd814b280c280bca860b\Material-ViewPagerIndicator-1.0.4\AndroidManifest.xml:19:1-29:12
+MERGED from [com.github.ronaldsmartin:Material-ViewPagerIndicator:1.0.4] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\f8cb59a1bf6aef0d31afd578ec226e3d\Material-ViewPagerIndicator-1.0.4\AndroidManifest.xml:19:1-29:12
 MERGED from [com.github.ashqal:android-libresample:0.3.0] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\3b1f5842dd36277f1725ab1fd357e6c9\android-libresample-0.3.0\AndroidManifest.xml:2:1-11:12
 MERGED from [com.android.support:support-fragment:28.0.0] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\7c3616f46c233483189f28c6aecc1bf8\support-fragment-28.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support:animated-vector-drawable:28.0.0] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\aa102c73461ceaead80426ed3767173f\animated-vector-drawable-28.0.0\AndroidManifest.xml:17:1-22:12
@@ -42,89 +42,89 @@ MERGED from [com.android.support:documentfile:28.0.0] C:\Users\PC\.gradle\caches
 MERGED from [com.android.support:localbroadcastmanager:28.0.0] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\8dbf37106270662bcf8910d884c3388d\localbroadcastmanager-28.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support:print:28.0.0] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\f9b4407e2d6f9e6d73e2e41e2d02eb35\print-28.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support:interpolator:28.0.0] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\d7fd0a6b82dbac033f938c982be39bd3\interpolator-28.0.0\AndroidManifest.xml:17:1-22:12
-INJECTED from D:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:2:1-101:12
-INJECTED from D:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:2:1-101:12
-INJECTED from D:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:2:1-101:12
+INJECTED from C:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:2:1-93:12
+INJECTED from C:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:2:1-93:12
+INJECTED from C:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:2:1-93:12
 	package
-		ADDED from D:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:3:5-34
-		INJECTED from D:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml
-		INJECTED from D:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml
+		ADDED from C:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:3:5-34
+		INJECTED from C:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml
 	android:versionName
-		INJECTED from D:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml
-		ADDED from D:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:2:1-101:12
-		INJECTED from D:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml
+		ADDED from C:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:2:1-93:12
+		INJECTED from C:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml
 	android:versionCode
-		INJECTED from D:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml
-		ADDED from D:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:2:1-101:12
-		INJECTED from D:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml
+		ADDED from C:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:2:1-93:12
+		INJECTED from C:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml
 	xmlns:android
-		ADDED from D:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:2:11-69
+		ADDED from C:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:2:11-69
 queries
-ADDED from D:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:5:5-9:15
+ADDED from C:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:5:5-9:15
 intent
-ADDED from D:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:6:9-8:18
+ADDED from C:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:6:9-8:18
 action#android.speech.RecognitionService
-ADDED from D:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:7:13-72
+ADDED from C:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:7:13-72
 	android:name
-		ADDED from D:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:7:21-69
+		ADDED from C:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:7:21-69
 uses-permission#android.permission.BLUETOOTH
-ADDED from D:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:11:5-68
+ADDED from C:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:11:5-68
 	android:name
-		ADDED from D:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:11:22-65
+		ADDED from C:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:11:22-65
 uses-permission#android.permission.INTERNET
-ADDED from D:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:12:5-67
+ADDED from C:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:12:5-67
 	android:name
-		ADDED from D:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:12:22-64
+		ADDED from C:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:12:22-64
 uses-permission#android.permission.ACCESS_NETWORK_STATE
-ADDED from D:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:13:5-79
+ADDED from C:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:13:5-79
 	android:name
-		ADDED from D:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:13:22-76
+		ADDED from C:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:13:22-76
 uses-feature#android.hardware.telephony
-ADDED from D:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:15:5-63
+ADDED from C:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:15:5-63
 	android:name
-		ADDED from D:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:15:19-60
+		ADDED from C:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:15:19-60
 uses-permission#android.permission.READ_PHONE_STATE
-ADDED from D:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:17:5-75
+ADDED from C:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:17:5-75
 	android:name
-		ADDED from D:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:17:22-72
+		ADDED from C:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:17:22-72
 uses-permission#android.permission.CALL_PHONE
-ADDED from D:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:18:5-69
+ADDED from C:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:18:5-69
 	android:name
-		ADDED from D:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:18:22-66
+		ADDED from C:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:18:22-66
 uses-permission#android.permission.RECORD_AUDIO
-ADDED from D:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:19:5-71
+ADDED from C:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:19:5-71
 	android:name
-		ADDED from D:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:19:22-68
+		ADDED from C:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:19:22-68
 uses-permission#android.permission.WAKE_LOCK
-ADDED from D:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:20:5-68
+ADDED from C:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:20:5-68
 	android:name
-		ADDED from D:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:20:22-65
+		ADDED from C:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:20:22-65
 uses-permission#android.permission.RECEIVE_BOOT_COMPLETED
-ADDED from D:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:21:5-81
+ADDED from C:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:21:5-81
 	android:name
-		ADDED from D:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:21:22-78
+		ADDED from C:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:21:22-78
 uses-permission#android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS
-ADDED from D:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:22:5-95
+ADDED from C:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:22:5-95
 	android:name
-		ADDED from D:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:22:22-92
+		ADDED from C:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:22:22-92
 uses-permission#android.permission.FOREGROUND_SERVICE
-ADDED from D:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:23:5-77
+ADDED from C:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:23:5-77
 	android:name
-		ADDED from D:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:23:22-74
+		ADDED from C:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:23:22-74
 uses-permission#android.permission.ACTION_MANAGE_OVERLAY_PERMISSION
-ADDED from D:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:24:5-91
+ADDED from C:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:24:5-91
 	android:name
-		ADDED from D:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:24:22-88
+		ADDED from C:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:24:22-88
 uses-permission#android.permission.SYSTEM_ALERT_WINDOW
-ADDED from D:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:25:5-78
+ADDED from C:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:25:5-78
 	android:name
-		ADDED from D:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:25:22-75
+		ADDED from C:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:25:22-75
 uses-permission#android.permission.MODIFY_AUDIO_SETTINGS
-ADDED from D:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:26:5-80
+ADDED from C:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:26:5-80
 	android:name
-		ADDED from D:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:26:22-77
+		ADDED from C:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:26:22-77
 application
-ADDED from D:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:28:5-99:19
+ADDED from C:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:28:5-91:19
 MERGED from [android.arch.lifecycle:extensions:1.1.1] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\e82df37e644869abde55b8ff81ffeca4\extensions-1.1.1\AndroidManifest.xml:22:5-28:19
 MERGED from [android.arch.lifecycle:extensions:1.1.1] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\e82df37e644869abde55b8ff81ffeca4\extensions-1.1.1\AndroidManifest.xml:22:5-28:19
 MERGED from [com.android.support.constraint:constraint-layout:2.0.4] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\eb78d98bc77e12182e6c9865d2d04907\constraint-layout-2.0.4\AndroidManifest.xml:9:5-20
@@ -140,129 +140,129 @@ MERGED from [com.github.bumptech.glide:gifdecoder:4.8.0] C:\Users\PC\.gradle\cac
 	android:appComponentFactory
 		ADDED from [com.android.support:support-compat:28.0.0] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\00567bd0de14b33d1bf8a440dc72bff8\support-compat-28.0.0\AndroidManifest.xml:22:18-91
 	android:label
-		ADDED from D:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:32:9-41
+		ADDED from C:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:32:9-41
 	android:icon
-		ADDED from D:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:31:9-43
+		ADDED from C:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:31:9-43
 	android:allowBackup
-		ADDED from D:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:30:9-36
+		ADDED from C:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:30:9-36
 	android:usesCleartextTraffic
-		ADDED from D:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:33:9-44
+		ADDED from C:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:33:9-44
 	android:name
-		ADDED from D:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:29:9-28
+		ADDED from C:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:29:9-28
 activity#com.dekidea.tuneurl.activity.MainActivity
-ADDED from D:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:35:9-47:20
+ADDED from C:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:35:9-47:20
 	android:screenOrientation
-		ADDED from D:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:40:13-49
+		ADDED from C:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:40:13-49
 	android:label
-		ADDED from D:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:38:13-45
+		ADDED from C:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:38:13-45
 	android:launchMode
-		ADDED from D:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:39:13-44
+		ADDED from C:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:39:13-44
 	android:allowTaskReparenting
-		ADDED from D:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:37:13-49
+		ADDED from C:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:37:13-49
 	android:theme
-		ADDED from D:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:41:13-63
+		ADDED from C:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:41:13-63
 	android:name
-		ADDED from D:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:36:13-50
+		ADDED from C:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:36:13-50
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from D:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:42:13-46:29
+ADDED from C:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:42:13-46:29
 	android:label
-		ADDED from D:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:42:28-60
+		ADDED from C:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:42:28-60
 action#android.intent.action.MAIN
-ADDED from D:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:43:17-69
+ADDED from C:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:43:17-69
 	android:name
-		ADDED from D:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:43:25-66
+		ADDED from C:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:43:25-66
 category#android.intent.category.LAUNCHER
-ADDED from D:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:45:17-77
+ADDED from C:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:45:17-77
 	android:name
-		ADDED from D:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:45:27-74
+		ADDED from C:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:45:27-74
 activity#com.dekidea.tuneurl.activity.AlertActivity
-ADDED from D:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:48:9-54:72
+ADDED from C:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:48:9-54:72
 	android:screenOrientation
-		ADDED from D:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:53:13-49
+		ADDED from C:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:53:13-49
 	android:label
-		ADDED from D:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:51:13-53
+		ADDED from C:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:51:13-53
 	android:launchMode
-		ADDED from D:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:52:13-44
+		ADDED from C:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:52:13-44
 	android:allowTaskReparenting
-		ADDED from D:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:50:13-48
+		ADDED from C:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:50:13-48
 	android:theme
-		ADDED from D:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:54:13-60
+		ADDED from C:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:54:13-60
 	android:name
-		ADDED from D:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:49:13-51
+		ADDED from C:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:49:13-51
 service#com.dekidea.tuneurl.service.SoundListenerService
-ADDED from D:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:56:9-59:68
+ADDED from C:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:56:9-59:68
 	android:exported
-		ADDED from D:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:58:13-36
+		ADDED from C:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:58:13-36
 	android:permission
-		ADDED from D:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:59:13-65
+		ADDED from C:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:59:13-65
 	android:name
-		ADDED from D:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:57:13-57
+		ADDED from C:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:57:13-57
 service#com.dekidea.tuneurl.service.MediaProjectionServer
-ADDED from D:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:60:9-62:63
+ADDED from C:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:60:9-62:63
 	android:foregroundServiceType
-		ADDED from D:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:62:13-60
+		ADDED from C:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:62:13-60
 	android:name
-		ADDED from D:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:61:13-58
+		ADDED from C:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:61:13-58
 service#com.dekidea.tuneurl.service.APIService
-ADDED from D:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:63:9-55
+ADDED from C:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:63:9-55
 	android:name
-		ADDED from D:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:63:18-52
+		ADDED from C:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:63:18-52
 service#com.dekidea.tuneurl.service.AutorunService
-ADDED from D:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:64:9-59
+ADDED from C:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:64:9-59
 	android:name
-		ADDED from D:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:64:18-56
+		ADDED from C:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:64:18-56
 service#com.dekidea.tuneurl.service.AutorunJobService
-ADDED from D:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:65:9-68:80
+ADDED from C:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:65:9-68:80
 	android:exported
-		ADDED from D:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:67:13-36
+		ADDED from C:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:67:13-36
 	android:permission
-		ADDED from D:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:68:13-69
+		ADDED from C:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:68:13-69
 	android:name
-		ADDED from D:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:66:13-54
+		ADDED from C:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:66:13-54
 receiver#com.dekidea.tuneurl.receiver.ConnectivityChangeReceiver
-ADDED from D:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:70:9-74:20
+ADDED from C:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:70:9-74:20
 	android:name
-		ADDED from D:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:70:19-70
+		ADDED from C:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:70:19-70
 intent-filter#action:name:android.net.conn.CONNECTIVITY_CHANGE
-ADDED from D:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:71:13-73:29
+ADDED from C:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:71:13-73:29
 action#android.net.conn.CONNECTIVITY_CHANGE
-ADDED from D:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:72:17-79
+ADDED from C:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:72:17-79
 	android:name
-		ADDED from D:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:72:25-76
+		ADDED from C:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:72:25-76
 receiver#com.dekidea.tuneurl.receiver.BootCompletedReceiver
-ADDED from D:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:75:9-81:20
+ADDED from C:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:75:9-81:20
 	android:name
-		ADDED from D:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:75:19-65
+		ADDED from C:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:75:19-65
 intent-filter#action:name:android.intent.action.BOOT_COMPLETED+category:name:android.intent.category.HOME
-ADDED from D:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:76:13-80:29
+ADDED from C:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:76:13-80:29
 action#android.intent.action.BOOT_COMPLETED
-ADDED from D:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:77:17-79
+ADDED from C:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:77:17-79
 	android:name
-		ADDED from D:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:77:25-76
+		ADDED from C:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:77:25-76
 category#android.intent.category.HOME
-ADDED from D:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:79:17-73
+ADDED from C:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:79:17-73
 	android:name
-		ADDED from D:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:79:27-70
+		ADDED from C:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:79:27-70
 receiver#com.dekidea.tuneurl.receiver.PhoneStateReceiver
-ADDED from D:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:91:9-95:20
+ADDED from C:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:83:9-87:20
 	android:name
-		ADDED from D:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:91:19-62
+		ADDED from C:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:83:19-62
 intent-filter#action:name:android.intent.action.PHONE_STATE
-ADDED from D:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:92:13-94:29
+ADDED from C:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:84:13-86:29
 	android:priority
-		ADDED from D:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:92:28-50
+		ADDED from C:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:84:28-50
 action#android.intent.action.PHONE_STATE
-ADDED from D:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:93:17-75
+ADDED from C:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:85:17-75
 	android:name
-		ADDED from D:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:93:25-73
+		ADDED from C:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:85:25-73
 receiver#com.dekidea.tuneurl.receiver.HeadsetReceiver
-ADDED from D:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:97:9-71
+ADDED from C:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:89:9-71
 	android:name
-		ADDED from D:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:97:19-59
+		ADDED from C:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml:89:19-59
 uses-sdk
-INJECTED from D:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
-INJECTED from D:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml
-INJECTED from D:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml
+INJECTED from C:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from C:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml
+INJECTED from C:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml
 MERGED from [android.arch.lifecycle:extensions:1.1.1] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\e82df37e644869abde55b8ff81ffeca4\extensions-1.1.1\AndroidManifest.xml:20:5-44
 MERGED from [android.arch.lifecycle:extensions:1.1.1] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\e82df37e644869abde55b8ff81ffeca4\extensions-1.1.1\AndroidManifest.xml:20:5-44
 MERGED from [com.android.support.constraint:constraint-layout:2.0.4] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\eb78d98bc77e12182e6c9865d2d04907\constraint-layout-2.0.4\AndroidManifest.xml:5:5-7:41
@@ -279,8 +279,8 @@ MERGED from [com.jakewharton:butterknife:8.8.1] C:\Users\PC\.gradle\caches\trans
 MERGED from [com.jakewharton:butterknife:8.8.1] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\bae90b9f7ba6b18f10d5a111f5c00bf2\butterknife-8.8.1\AndroidManifest.xml:5:5-43
 MERGED from [com.github.bumptech.glide:glide:4.8.0] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\940eb2169f8084e65e0d681d50bd8b9c\glide-4.8.0\AndroidManifest.xml:6:5-8:41
 MERGED from [com.github.bumptech.glide:glide:4.8.0] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\940eb2169f8084e65e0d681d50bd8b9c\glide-4.8.0\AndroidManifest.xml:6:5-8:41
-MERGED from [com.github.ronaldsmartin:Material-ViewPagerIndicator:1.0.4] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\c0ed3b9d3513dd814b280c280bca860b\Material-ViewPagerIndicator-1.0.4\AndroidManifest.xml:25:5-27:41
-MERGED from [com.github.ronaldsmartin:Material-ViewPagerIndicator:1.0.4] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\c0ed3b9d3513dd814b280c280bca860b\Material-ViewPagerIndicator-1.0.4\AndroidManifest.xml:25:5-27:41
+MERGED from [com.github.ronaldsmartin:Material-ViewPagerIndicator:1.0.4] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\f8cb59a1bf6aef0d31afd578ec226e3d\Material-ViewPagerIndicator-1.0.4\AndroidManifest.xml:25:5-27:41
+MERGED from [com.github.ronaldsmartin:Material-ViewPagerIndicator:1.0.4] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\f8cb59a1bf6aef0d31afd578ec226e3d\Material-ViewPagerIndicator-1.0.4\AndroidManifest.xml:25:5-27:41
 MERGED from [com.github.ashqal:android-libresample:0.3.0] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\3b1f5842dd36277f1725ab1fd357e6c9\android-libresample-0.3.0\AndroidManifest.xml:7:5-9:41
 MERGED from [com.github.ashqal:android-libresample:0.3.0] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\3b1f5842dd36277f1725ab1fd357e6c9\android-libresample-0.3.0\AndroidManifest.xml:7:5-9:41
 MERGED from [com.android.support:support-fragment:28.0.0] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\7c3616f46c233483189f28c6aecc1bf8\support-fragment-28.0.0\AndroidManifest.xml:20:5-44
@@ -339,16 +339,16 @@ MERGED from [com.android.support:print:28.0.0] C:\Users\PC\.gradle\caches\transf
 MERGED from [com.android.support:print:28.0.0] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\f9b4407e2d6f9e6d73e2e41e2d02eb35\print-28.0.0\AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:interpolator:28.0.0] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\d7fd0a6b82dbac033f938c982be39bd3\interpolator-28.0.0\AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:interpolator:28.0.0] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\d7fd0a6b82dbac033f938c982be39bd3\interpolator-28.0.0\AndroidManifest.xml:20:5-44
-INJECTED from D:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml
-INJECTED from D:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml
+INJECTED from C:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml
+INJECTED from C:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml
 	android:targetSdkVersion
-		INJECTED from D:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml
-		ADDED from D:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml
-		INJECTED from D:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml
+		ADDED from C:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml
 	android:minSdkVersion
-		INJECTED from D:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml
-		ADDED from D:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml
-		INJECTED from D:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml
+		ADDED from C:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Android\Workspace\TuneURL\app\src\main\AndroidManifest.xml
 provider#android.arch.lifecycle.ProcessLifecycleOwnerInitializer
 ADDED from [android.arch.lifecycle:extensions:1.1.1] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\e82df37e644869abde55b8ff81ffeca4\extensions-1.1.1\AndroidManifest.xml:23:9-27:43
 	android:authorities
