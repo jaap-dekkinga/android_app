@@ -1,21 +1,21 @@
 {
   "buildFiles": [
-    "D:\\Android\\Old_NDKs\\android-ndk-r17c\\build\\cmake\\android.toolchain.cmake",
-    "D:\\Android\\Workspace\\TuneURL\\app\\src\\main\\cpp\\CMakeLists.txt"
+    "C:\\Android\\Old_NDKs\\android-ndk-r17c\\build\\cmake\\android.toolchain.cmake",
+    "C:\\Android\\Workspace\\TuneURL\\app\\src\\main\\cpp\\CMakeLists.txt"
   ],
   "cleanCommands": [
-    "D:\\Android\\Sdk\\cmake\\3.10.2.4988404\\bin\\ninja.exe -C \"D:\\Android\\Workspace\\TuneURL\\app\\.cxx\\cmake\\debug\\x86\" clean"
+    "C:\\Users\\PC\\AppData\\Local\\Android\\Sdk\\cmake\\3.10.2.4988404\\bin\\ninja.exe -C \"C:\\Android\\Workspace\\TuneURL\\app\\.cxx\\cmake\\debug\\x86\" clean"
   ],
-  "buildTargetsCommand": "D:\\Android\\Sdk\\cmake\\3.10.2.4988404\\bin\\ninja.exe  -C \"D:\\Android\\Workspace\\TuneURL\\app\\.cxx\\cmake\\debug\\x86\" {LIST_OF_TARGETS_TO_BUILD}",
+  "buildTargetsCommand": "C:\\Users\\PC\\AppData\\Local\\Android\\Sdk\\cmake\\3.10.2.4988404\\bin\\ninja.exe  -C \"C:\\Android\\Workspace\\TuneURL\\app\\.cxx\\cmake\\debug\\x86\" {LIST_OF_TARGETS_TO_BUILD}",
   "libraries": {
     "native-lib-Debug-x86": {
       "artifactName": "native-lib",
-      "buildCommand": "D:\\Android\\Sdk\\cmake\\3.10.2.4988404\\bin\\ninja.exe -C \"D:\\Android\\Workspace\\TuneURL\\app\\.cxx\\cmake\\debug\\x86\" native-lib",
+      "buildCommand": "C:\\Users\\PC\\AppData\\Local\\Android\\Sdk\\cmake\\3.10.2.4988404\\bin\\ninja.exe -C \"C:\\Android\\Workspace\\TuneURL\\app\\.cxx\\cmake\\debug\\x86\" native-lib",
       "abi": "x86",
-      "output": "D:\\Android\\Workspace\\TuneURL\\app\\build\\intermediates\\cmake\\debug\\obj\\x86\\libnative-lib.so",
+      "output": "C:\\Android\\Workspace\\TuneURL\\app\\build\\intermediates\\cmake\\debug\\obj\\x86\\libnative-lib.so",
       "runtimeFiles": [
-        "D:\\Android\\Old_NDKs\\android-ndk-r17c\\sources\\cxx-stl\\llvm-libc++\\libs\\x86\\libc++_static.a",
-        "D:\\Android\\Old_NDKs\\android-ndk-r17c\\sources\\cxx-stl\\llvm-libc++\\libs\\x86\\libc++abi.a"
+        "C:\\Android\\Old_NDKs\\android-ndk-r17c\\sources\\cxx-stl\\llvm-libc++\\libs\\x86\\libc++_static.a",
+        "C:\\Android\\Old_NDKs\\android-ndk-r17c\\sources\\cxx-stl\\llvm-libc++\\libs\\x86\\libc++abi.a"
       ]
     }
   }

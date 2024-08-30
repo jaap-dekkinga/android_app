@@ -8,14 +8,9 @@ public interface Constants {
 
     public static final String SETTING_API_URL = "api_url";
 
-    //public static final String TUNEURL_API_BASE_URL = "http://34.208.97.117";
     public static final String TUNEURL_API_BASE_URL = "http://ec2-54-213-252-225.us-west-2.compute.amazonaws.com";
-    //public static final String TUNEURL_API_URL = "http://34.208.97.117/api/match";
-
     public static final String SEARCH_FINGERPRINT_URL = "https://pnz3vadc52.execute-api.us-east-2.amazonaws.com/dev/search-fingerprint";
-
     public static final String POLL_API_URL = "http://pollapiwebservice.us-east-2.elasticbeanstalk.com/api/pollapi";
-
     public static final String INTERESTS_API_URL = "https://65neejq3c9.execute-api.us-east-2.amazonaws.com/interests";
 
     public static final String SHARED_PREFERENCES = "com.appcountry.soundalert.SHARED_PREFERENCES";

@@ -91,15 +91,6 @@
                 <category android:name="android.intent.category.HOME" />
             </intent-filter>
         </receiver>
-
-        <!--
-        <receiver android:name=".receiver.CallReceiver">
-            <intent-filter android:priority="999">
-                <action android:name="android.intent.action.PHONE_STATE" />
-            </intent-filter>
-        </receiver>
-        -->
-
         <receiver android:name="com.dekidea.tuneurl.receiver.PhoneStateReceiver" >
             <intent-filter android:priority="999" >
                 <action android:name="android.intent.action.PHONE_STATE" />
