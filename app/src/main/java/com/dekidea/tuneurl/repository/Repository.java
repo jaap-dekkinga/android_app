@@ -6,6 +6,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.net.Uri;
+import android.os.Build;
 import android.support.v4.app.ActivityCompat;
 
 import com.dekidea.tuneurl.activity.AlertActivity;
@@ -533,9 +534,18 @@ public class Repository implements Constants {
 
         Intent i = new Intent(context, AlertActivity.class);
 
-        i.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TOP);
-        i.putExtra(TUNEURL_ID, TuneURL_ID);
-        i.putExtra(DATE, date);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
+
+            i.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+            i.putExtra(TUNEURL_ID, TuneURL_ID);
+            i.putExtra(DATE, date);
+        }
+        else{
+
+            i.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TOP);
+            i.putExtra(TUNEURL_ID, TuneURL_ID);
+            i.putExtra(DATE, date);
+        }
 
         context.startActivity(i);
     }

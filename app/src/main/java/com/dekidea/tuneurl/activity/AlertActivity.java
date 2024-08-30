@@ -225,7 +225,10 @@ public class AlertActivity extends Activity implements Constants, RecognitionLis
 
 					doAction(final_user_response);
 
-					moveTaskToBack(true);
+					if (Build.VERSION.SDK_INT < Build.VERSION_CODES.TIRAMISU) {
+
+						moveTaskToBack(true);
+					}
 
 					finish();
 				}

@@ -5,6 +5,7 @@ import android.content.Intent;
 
 import com.dekidea.tuneurl.repository.Repository;
 import com.dekidea.tuneurl.util.Constants;
+import com.dekidea.tuneurl.util.Settings;
 import com.dekidea.tuneurl.util.WakeLocker;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;

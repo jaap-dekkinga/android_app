@@ -2,16 +2,16 @@ apply plugin: 'com.android.application'
 
 android {
 
-    compileSdkVersion 30
-    buildToolsVersion "30.0.2"
+    compileSdkVersion 34
+    buildToolsVersion "34.0.0"
 
     defaultConfig {
 
         applicationId "com.dekidea.tuneurl"
         minSdkVersion 27
-        targetSdkVersion 30
-        versionCode 41
-        versionName "1.0.41"
+        targetSdkVersion 34
+        versionCode 42
+        versionName "1.0.42"
 
         externalNativeBuild {
             cmake {

@@ -9,6 +9,7 @@ import com.dekidea.tuneurl.util.FileUtils;
 import com.dekidea.tuneurl.util.Settings;
 import com.dekidea.tuneurl.util.WakeLocker;
 
+import android.Manifest;
 import android.app.Notification;
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
@@ -18,6 +19,7 @@ import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
+import android.content.pm.PackageManager;
 import android.media.AudioFormat;
 import android.media.AudioManager;
 import android.media.AudioRecord;
@@ -25,9 +27,11 @@ import android.media.MediaRecorder;
 import android.os.Build;
 import android.os.IBinder;
 import android.support.annotation.RequiresApi;
+import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.NotificationCompat;
 
 import static android.support.v4.app.NotificationCompat.PRIORITY_HIGH;
+
 
 import java.io.FileInputStream;
 import java.io.InputStream;
@@ -42,7 +46,7 @@ public class SoundListenerService extends Service implements Constants {
 
 	private static final int DEFAULT_SOUND_THRESHOLD = 90;
 	private static final float SIMILARITY_THRESHOLD = 0.5f;
-	
+
 	private static final int RECORDER_BPP = 16;
 	private static final int RECORDING_SAMPLE_RATE = 44100;
 	private static final int FINGERPRINT_SAMPLE_RATE = 10240;
@@ -50,13 +54,13 @@ public class SoundListenerService extends Service implements Constants {
 	private static final int TRIGGER_SIZE_MILLIS = 1500;
 	private static final int TUNE_URL_SIZE_MILLIS = 5000;
 
-	private static final int FINGERPRINT_TRIGGER_BUFFER_SIZE = (int)((double)FINGERPRINT_SAMPLE_RATE * ((double)RECORDER_BPP / 8d) * ((double)TRIGGER_SIZE_MILLIS / 1000d));
-	private static final int RECORDED_TRIGGER_BUFFER_SIZE = (int)((double)RECORDING_SAMPLE_RATE * ((double)RECORDER_BPP / 8d) * ((double)TRIGGER_SIZE_MILLIS / 1000d));
+	private static final int FINGERPRINT_TRIGGER_BUFFER_SIZE = (int) ((double) FINGERPRINT_SAMPLE_RATE * ((double) RECORDER_BPP / 8d) * ((double) TRIGGER_SIZE_MILLIS / 1000d));
+	private static final int RECORDED_TRIGGER_BUFFER_SIZE = (int) ((double) RECORDING_SAMPLE_RATE * ((double) RECORDER_BPP / 8d) * ((double) TRIGGER_SIZE_MILLIS / 1000d));
 
-	private static final int FINGERPRINT_TUNE_URL_BUFFER_SIZE = (int)((double)FINGERPRINT_SAMPLE_RATE * ((double)RECORDER_BPP / 8d) * ((double)TUNE_URL_SIZE_MILLIS / 1000d));
-	private static final int RECORDED_TUNE_URL_BUFFER_SIZE = (int)((double)RECORDING_SAMPLE_RATE * ((double)RECORDER_BPP / 8d) * ((double)TUNE_URL_SIZE_MILLIS / 1000d));
+	private static final int FINGERPRINT_TUNE_URL_BUFFER_SIZE = (int) ((double) FINGERPRINT_SAMPLE_RATE * ((double) RECORDER_BPP / 8d) * ((double) TUNE_URL_SIZE_MILLIS / 1000d));
+	private static final int RECORDED_TUNE_URL_BUFFER_SIZE = (int) ((double) RECORDING_SAMPLE_RATE * ((double) RECORDER_BPP / 8d) * ((double) TUNE_URL_SIZE_MILLIS / 1000d));
 
-	private static final int TUNE_URL_WAVE_LENGHT = (int)((double)FINGERPRINT_TUNE_URL_BUFFER_SIZE / 2d);
+	private static final int TUNE_URL_WAVE_LENGHT = (int) ((double) FINGERPRINT_TUNE_URL_BUFFER_SIZE / 2d);
 
 	private static final int STOPPED = 0;
 	private static final int LISTENING = 1;
@@ -96,7 +100,7 @@ public class SoundListenerService extends Service implements Constants {
 
 		System.loadLibrary("native-lib");
 	}
-	
+
 
 	@Override
 	public void onCreate() {
@@ -109,8 +113,7 @@ public class SoundListenerService extends Service implements Constants {
 	}
 
 
-	
-	private void initializeResources(){
+	private void initializeResources() {
 
 		try {
 
@@ -135,19 +138,27 @@ public class SoundListenerService extends Service implements Constants {
 
 			resampledTuneUrlByteBuffer = ByteBuffer.allocateDirect(FINGERPRINT_TUNE_URL_BUFFER_SIZE);
 			resampledTuneUrlByteBuffer.order(ByteOrder.LITTLE_ENDIAN);
-			
+
 			mHeadSetReceiver = new HeadsetReceiver();
 			mIntentFilter = new IntentFilter(Intent.ACTION_HEADSET_PLUG);
 
 			mListenerActionReceiver = new ListenerActionReceiver();
 			mListenerActionFilter = new IntentFilter(LISTENING_ACTION);
 
-			registerReceiver(mHeadSetReceiver, mIntentFilter);
-			registerReceiver(mListenerActionReceiver, mListenerActionFilter);
+			if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
+
+				registerReceiver(mHeadSetReceiver, mIntentFilter, Context.RECEIVER_EXPORTED);
+				registerReceiver(mListenerActionReceiver, mListenerActionFilter, Context.RECEIVER_EXPORTED);
+			}
+			else{
+
+				registerReceiver(mHeadSetReceiver, mIntentFilter);
+				registerReceiver(mListenerActionReceiver, mListenerActionFilter);
+			}
 
 			mSimilarity = 0;
 		}
-		catch (Exception e){
+		catch (Exception e) {
 
 			e.printStackTrace();
 		}
@@ -163,7 +174,7 @@ public class SoundListenerService extends Service implements Constants {
 
 
 	@Override
-	public int onStartCommand(Intent intent, int flags, int startId){
+	public int onStartCommand(Intent intent, int flags, int startId) {
 
 		super.onStartCommand(intent, flags, startId);
 
@@ -176,7 +187,7 @@ public class SoundListenerService extends Service implements Constants {
 
 
 	@Override
-	public void onDestroy(){
+	public void onDestroy() {
 
 		super.onDestroy();
 
@@ -189,7 +200,7 @@ public class SoundListenerService extends Service implements Constants {
 		runAsForeground();
 
 		Settings.initializeCurrentHeadsetState(mContext);
-		
+
 		Settings.updateIntSetting(mContext, SETTING_RUNNING_STATE, SETTING_RUNNING_STATE_STARTED);
 
 		mSoundThreshold = Settings.fetchIntSetting(this, SETTING_SOUND_THRESHOLD, DEFAULT_SOUND_THRESHOLD);
@@ -198,12 +209,12 @@ public class SoundListenerService extends Service implements Constants {
 	}
 
 
-	private void runAsForeground(){
+	private void runAsForeground() {
 
 		Intent i = new Intent(this, MainActivity.class);
 		i.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TOP);
 
-		PendingIntent pendingIntent = PendingIntent.getActivity(this, 0, i, PendingIntent.FLAG_UPDATE_CURRENT);
+		PendingIntent pendingIntent = PendingIntent.getActivity(this, 0, i, PendingIntent.FLAG_UPDATE_CURRENT | PendingIntent.FLAG_IMMUTABLE);
 
 		// Create the Foreground Service
 		NotificationManager notificationManager = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
@@ -223,7 +234,7 @@ public class SoundListenerService extends Service implements Constants {
 
 
 	@RequiresApi(Build.VERSION_CODES.O)
-	private String createNotificationChannel(NotificationManager notificationManager){
+	private String createNotificationChannel(NotificationManager notificationManager) {
 		String channelId = "tune_url_sound_listener_service";
 		String channelName = "TuneURL Service";
 		NotificationChannel channel = new NotificationChannel(channelId, channelName, NotificationManager.IMPORTANCE_HIGH);
@@ -254,15 +265,14 @@ public class SoundListenerService extends Service implements Constants {
 
 				int action = intent.getIntExtra(ACTION, -1);
 
-				if(action == ACTION_START_LISTENING){
+				if (action == ACTION_START_LISTENING) {
 
 					startListening();
-				}
-				else if(action == ACTION_STOP_LISTENING){
+				} else if (action == ACTION_STOP_LISTENING) {
 
 					stopListening();
 				}
-				else if(action == ACTION_STOP_RECORDER){
+				else if (action == ACTION_STOP_RECORDER) {
 
 					mRecorderState = STOPPED;
 				}
@@ -271,40 +281,41 @@ public class SoundListenerService extends Service implements Constants {
 	}
 
 
-	private void startListening(){
+	private void startListening() {
 
-		System.out.println("SoundListenerService.startListening()");
+		if (ActivityCompat.checkSelfPermission(this, Manifest.permission.RECORD_AUDIO) == PackageManager.PERMISSION_GRANTED) {
 
-		if(mRecorder == null) {
+			if (mRecorder == null) {
 
-			try {
+				try {
 
-				AudioManager audioManager = (AudioManager) getApplicationContext().getSystemService(Context.AUDIO_SERVICE);
+					AudioManager audioManager = (AudioManager) getApplicationContext().getSystemService(Context.AUDIO_SERVICE);
 
-				int audio_source = MediaRecorder.AudioSource.MIC;
+					int audio_source = MediaRecorder.AudioSource.MIC;
 
-				if (audioManager.isWiredHeadsetOn()) {
+					if (audioManager.isWiredHeadsetOn()) {
 
-					audio_source = MediaRecorder.AudioSource.DEFAULT;
+						audio_source = MediaRecorder.AudioSource.DEFAULT;
+					}
+
+					int bufferSize = AudioRecord.getMinBufferSize(RECORDING_SAMPLE_RATE, AudioFormat.CHANNEL_IN_MONO, AudioFormat.ENCODING_PCM_16BIT) * 4;
+
+					mRecorder = new AudioRecord(audio_source,
+							RECORDING_SAMPLE_RATE,
+							AudioFormat.CHANNEL_IN_MONO,
+							AudioFormat.ENCODING_PCM_16BIT, bufferSize);
+
+					startListeningForTrigger();
+
+				} catch (Exception e) {
+
+					e.printStackTrace();
 				}
-
-				int bufferSize = AudioRecord.getMinBufferSize(RECORDING_SAMPLE_RATE, AudioFormat.CHANNEL_IN_MONO, AudioFormat.ENCODING_PCM_16BIT) * 4;
-
-				mRecorder = new AudioRecord(audio_source,
-						RECORDING_SAMPLE_RATE,
-						AudioFormat.CHANNEL_IN_MONO,
-						AudioFormat.ENCODING_PCM_16BIT, bufferSize);
-
-				startListeningForTrigger();
 			}
-			catch (Exception e) {
+			else {
 
-				e.printStackTrace();
+				mRecorderState = LISTENING;
 			}
-		}
-		else{
-
-			mRecorderState = LISTENING;
 		}
 	}
 
