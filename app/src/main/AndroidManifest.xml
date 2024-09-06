@@ -27,10 +27,11 @@
 
     <uses-permission android:name="android.permission.POST_NOTIFICATIONS"/>
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
-    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_SPECIAL_USE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_MICROPHONE" />
 
+    <!--
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE_MEDIA_PROJECTION"/>
-
+-->
     <application
         android:name=".App"
         android:allowBackup="false"
@@ -66,15 +67,15 @@
             android:enabled="true"
             android:exported="false"
             android:permission="android.permission.RECORD_AUDIO"
-            android:foregroundServiceType="specialUse">
+            android:foregroundServiceType="microphone">
         </service>
-
+<!--
         <service
             android:name=".service.MediaProjectionServer"
             android:enabled="true"
             android:exported="false"
             android:foregroundServiceType="mediaProjection" />
-
+-->
         <service android:name=".service.APIService"
             android:enabled="true"
             android:exported="false"/>

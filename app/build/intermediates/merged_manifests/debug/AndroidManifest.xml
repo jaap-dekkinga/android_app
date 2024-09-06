@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.dekidea.tuneurl"
-    android:versionCode="43"
-    android:versionName="1.0.43" >
+    android:versionCode="44"
+    android:versionName="1.0.44" >
 
     <uses-sdk
         android:minSdkVersion="27"
-        android:targetSdkVersion="31" />
+        android:targetSdkVersion="34" />
     <!-- suppress AndroidElementNotAllowed -->
     <queries>
         <intent>
@@ -30,7 +30,11 @@
     <uses-permission android:name="android.permission.ACTION_MANAGE_OVERLAY_PERMISSION" />
     <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
     <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_MICROPHONE" />
 
+<!--     <uses-permission android:name="android.permission.FOREGROUND_SERVICE_MEDIA_PROJECTION"/> -->
     <application
         android:name="com.dekidea.tuneurl.App"
         android:allowBackup="false"
@@ -60,7 +64,6 @@
         <activity
             android:name="com.dekidea.tuneurl.activity.AlertActivity"
             android:allowTaskReparenting="true"
-            android:exported="false"
             android:label="@string/news_alert_label"
             android:launchMode="singleTask"
             android:screenOrientation="portrait"
@@ -68,20 +71,29 @@
 
         <service
             android:name="com.dekidea.tuneurl.service.SoundListenerService"
+            android:enabled="true"
             android:exported="false"
-            android:permission="android.permission.RECORD_AUDIO" />
+            android:foregroundServiceType="microphone"
+            android:permission="android.permission.RECORD_AUDIO" >
+        </service>
+        <!--
         <service
-            android:name="com.dekidea.tuneurl.service.MediaProjectionServer"
+            android:name=".service.MediaProjectionServer"
+            android:enabled="true"
             android:exported="false"
             android:foregroundServiceType="mediaProjection" />
+        -->
         <service
             android:name="com.dekidea.tuneurl.service.APIService"
+            android:enabled="true"
             android:exported="false" />
         <service
             android:name="com.dekidea.tuneurl.service.AutorunService"
+            android:enabled="true"
             android:exported="false" />
         <service
             android:name="com.dekidea.tuneurl.service.AutorunJobService"
+            android:enabled="true"
             android:exported="false"
             android:permission="android.permission.BIND_JOB_SERVICE" />
 
