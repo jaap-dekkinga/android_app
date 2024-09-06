@@ -1,4 +1,4 @@
-set(CMAKE_CXX_COMPILER "D:/Android/Old_NDKs/android-ndk-r17c/toolchains/llvm/prebuilt/windows-x86_64/bin/clang++.exe")
+set(CMAKE_CXX_COMPILER "C:/Android/Old_NDKs/android-ndk-r17c/toolchains/llvm/prebuilt/windows-x86_64/bin/clang++.exe")
 set(CMAKE_CXX_COMPILER_ARG1 "")
 set(CMAKE_CXX_COMPILER_ID "Clang")
 set(CMAKE_CXX_COMPILER_VERSION "3.8")
@@ -17,11 +17,11 @@ set(CMAKE_CXX_SIMULATE_VERSION "")
 
 
 
-set(CMAKE_AR "D:/Android/Old_NDKs/android-ndk-r17c/toolchains/x86_64-4.9/prebuilt/windows-x86_64/bin/x86_64-linux-android-ar.exe")
+set(CMAKE_AR "C:/Android/Old_NDKs/android-ndk-r17c/toolchains/x86_64-4.9/prebuilt/windows-x86_64/bin/x86_64-linux-android-ar.exe")
 set(CMAKE_CXX_COMPILER_AR "CMAKE_CXX_COMPILER_AR-NOTFOUND")
-set(CMAKE_RANLIB "D:/Android/Old_NDKs/android-ndk-r17c/toolchains/x86_64-4.9/prebuilt/windows-x86_64/bin/x86_64-linux-android-ranlib.exe")
+set(CMAKE_RANLIB "C:/Android/Old_NDKs/android-ndk-r17c/toolchains/x86_64-4.9/prebuilt/windows-x86_64/bin/x86_64-linux-android-ranlib.exe")
 set(CMAKE_CXX_COMPILER_RANLIB "CMAKE_CXX_COMPILER_RANLIB-NOTFOUND")
-set(CMAKE_LINKER "D:/Android/Old_NDKs/android-ndk-r17c/toolchains/x86_64-4.9/prebuilt/windows-x86_64/bin/x86_64-linux-android-ld.exe")
+set(CMAKE_LINKER "C:/Android/Old_NDKs/android-ndk-r17c/toolchains/x86_64-4.9/prebuilt/windows-x86_64/bin/x86_64-linux-android-ld.exe")
 set(CMAKE_COMPILER_IS_GNUCXX )
 set(CMAKE_CXX_COMPILER_LOADED 1)
 set(CMAKE_CXX_COMPILER_WORKS TRUE)
@@ -71,5 +71,5 @@ endif()
 
 
 set(CMAKE_CXX_IMPLICIT_LINK_LIBRARIES "m;gcc;gcc;dl;c;gcc;gcc;dl")
-set(CMAKE_CXX_IMPLICIT_LINK_DIRECTORIES "D:/Android/Old_NDKs/android-ndk-r17c/sources/cxx-stl/llvm-libc++/libs/x86_64;D:/Android/Old_NDKs/android-ndk-r17c/toolchains/llvm/prebuilt/windows-x86_64/lib64/clang/6.0.2/lib/linux/x86_64;D:/Android/Old_NDKs/android-ndk-r17c/toolchains/x86_64-4.9/prebuilt/windows-x86_64/lib/gcc/x86_64-linux-android/4.9.x;D:/Android/Old_NDKs/android-ndk-r17c/toolchains/x86_64-4.9/prebuilt/windows-x86_64/x86_64-linux-android/lib64;D:/Android/Old_NDKs/android-ndk-r17c/platforms/android-28/arch-x86_64/usr/lib64;D:/Android/Old_NDKs/android-ndk-r17c/toolchains/x86_64-4.9/prebuilt/windows-x86_64/x86_64-linux-android/lib;D:/Android/Old_NDKs/android-ndk-r17c/platforms/android-28/arch-x86_64/usr/lib")
+set(CMAKE_CXX_IMPLICIT_LINK_DIRECTORIES "C:/Android/Old_NDKs/android-ndk-r17c/sources/cxx-stl/llvm-libc++/libs/x86_64;C:/Android/Old_NDKs/android-ndk-r17c/toolchains/llvm/prebuilt/windows-x86_64/lib64/clang/6.0.2/lib/linux/x86_64;C:/Android/Old_NDKs/android-ndk-r17c/toolchains/x86_64-4.9/prebuilt/windows-x86_64/lib/gcc/x86_64-linux-android/4.9.x;C:/Android/Old_NDKs/android-ndk-r17c/toolchains/x86_64-4.9/prebuilt/windows-x86_64/x86_64-linux-android/lib64;C:/Android/Old_NDKs/android-ndk-r17c/platforms/android-27/arch-x86_64/usr/lib64;C:/Android/Old_NDKs/android-ndk-r17c/toolchains/x86_64-4.9/prebuilt/windows-x86_64/x86_64-linux-android/lib;C:/Android/Old_NDKs/android-ndk-r17c/platforms/android-27/arch-x86_64/usr/lib")
 set(CMAKE_CXX_IMPLICIT_LINK_FRAMEWORK_DIRECTORIES "")

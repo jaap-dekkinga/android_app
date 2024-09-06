@@ -1,21 +1,21 @@
-Executable : D:\Android\Sdk\cmake\3.10.2.4988404\bin\cmake.exe
+Executable : C:\Users\PC\AppData\Local\Android\Sdk\cmake\3.10.2.4988404\bin\cmake.exe
 arguments : 
--HD:\Android\Workspace\TuneURL\app\src\main\cpp
+-HC:\Android\Workspace\TuneURL\app\src\main\cpp
 -DCMAKE_CXX_FLAGS=-frtti -fexceptions
--DCMAKE_FIND_ROOT_PATH=D:\Android\Workspace\TuneURL\app\.cxx\cmake\debug\prefab\x86_64\prefab
+-DCMAKE_FIND_ROOT_PATH=C:\Android\Workspace\TuneURL\app\.cxx\cmake\debug\prefab\x86_64\prefab
 -DCMAKE_BUILD_TYPE=Debug
--DCMAKE_TOOLCHAIN_FILE=D:\Android\Old_NDKs\android-ndk-r17c\build\cmake\android.toolchain.cmake
+-DCMAKE_TOOLCHAIN_FILE=C:\Android\Old_NDKs\android-ndk-r17c\build\cmake\android.toolchain.cmake
 -DANDROID_ABI=x86_64
--DANDROID_NDK=D:\Android\Old_NDKs\android-ndk-r17c
--DANDROID_PLATFORM=android-28
+-DANDROID_NDK=C:\Android\Old_NDKs\android-ndk-r17c
+-DANDROID_PLATFORM=android-27
 -DCMAKE_ANDROID_ARCH_ABI=x86_64
--DCMAKE_ANDROID_NDK=D:\Android\Old_NDKs\android-ndk-r17c
+-DCMAKE_ANDROID_NDK=C:\Android\Old_NDKs\android-ndk-r17c
 -DCMAKE_EXPORT_COMPILE_COMMANDS=ON
--DCMAKE_LIBRARY_OUTPUT_DIRECTORY=D:\Android\Workspace\TuneURL\app\build\intermediates\cmake\debug\obj\x86_64
--DCMAKE_MAKE_PROGRAM=D:\Android\Sdk\cmake\3.10.2.4988404\bin\ninja.exe
+-DCMAKE_LIBRARY_OUTPUT_DIRECTORY=C:\Android\Workspace\TuneURL\app\build\intermediates\cmake\debug\obj\x86_64
+-DCMAKE_MAKE_PROGRAM=C:\Users\PC\AppData\Local\Android\Sdk\cmake\3.10.2.4988404\bin\ninja.exe
 -DCMAKE_SYSTEM_NAME=Android
--DCMAKE_SYSTEM_VERSION=28
--BD:\Android\Workspace\TuneURL\app\.cxx\cmake\debug\x86_64
+-DCMAKE_SYSTEM_VERSION=27
+-BC:\Android\Workspace\TuneURL\app\.cxx\cmake\debug\x86_64
 -GNinja
 jvmArgs : 
 

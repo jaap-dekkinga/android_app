@@ -1,103 +1,38 @@
 {
-  "stringTable": {
-    "0": "C:/Android/Workspace/TuneURL/app/.cxx/cmake/debug/x86",
-    "1": "--target=i686-none-linux-android --gcc-toolchain=C:/Android/Old_NDKs/android-ndk-r17c/toolchains/x86-4.9/prebuilt/windows-x86_64 --sysroot=C:/Android/Old_NDKs/android-ndk-r17c/sysroot -Dnative_lib_EXPORTS -isystem C:/Android/Old_NDKs/android-ndk-r17c/sources/cxx-stl/llvm-libc++/include -isystem C:/Android/Old_NDKs/android-ndk-r17c/sources/android/support/include -isystem C:/Android/Old_NDKs/android-ndk-r17c/sources/cxx-stl/llvm-libc++abi/include -isystem C:/Android/Old_NDKs/android-ndk-r17c/sysroot/usr/include/i686-linux-android -D__ANDROID_API__=27 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -mstackrealign -Wa,--noexecstack -Wformat -Werror=format-security -std=c++11 -frtti -fexceptions -O0 -fno-limit-debug-info -fPIC"
-  },
+  "stringTable": {},
   "buildFiles": [
-    "C:\\Android\\Old_NDKs\\android-ndk-r17c\\build\\cmake\\android.toolchain.cmake",
     "C:\\Android\\Workspace\\TuneURL\\app\\src\\main\\cpp\\CMakeLists.txt"
   ],
-  "cleanCommands": [
-    "C:\\Users\\PC\\AppData\\Local\\Android\\Sdk\\cmake\\3.10.2.4988404\\bin\\ninja.exe -C \"C:\\Android\\Workspace\\TuneURL\\app\\.cxx\\cmake\\debug\\x86\" clean"
+  "cleanCommandsComponents": [
+    [
+      "C:\\Users\\PC\\AppData\\Local\\Android\\Sdk\\cmake\\3.10.2.4988404\\bin\\ninja.exe",
+      "-C",
+      "C:\\Android\\Workspace\\TuneURL\\app\\.cxx\\cmake\\debug\\x86",
+      "clean"
+    ]
   ],
-  "buildTargetsCommand": "C:\\Users\\PC\\AppData\\Local\\Android\\Sdk\\cmake\\3.10.2.4988404\\bin\\ninja.exe  -C \"C:\\Android\\Workspace\\TuneURL\\app\\.cxx\\cmake\\debug\\x86\" {LIST_OF_TARGETS_TO_BUILD}",
+  "buildTargetsCommandComponents": [
+    "C:\\Users\\PC\\AppData\\Local\\Android\\Sdk\\cmake\\3.10.2.4988404\\bin\\ninja.exe",
+    "-C",
+    "C:\\Android\\Workspace\\TuneURL\\app\\.cxx\\cmake\\debug\\x86",
+    "{LIST_OF_TARGETS_TO_BUILD}"
+  ],
   "libraries": {
     "native-lib-Debug-x86": {
-      "buildCommand": "C:\\Users\\PC\\AppData\\Local\\Android\\Sdk\\cmake\\3.10.2.4988404\\bin\\ninja.exe -C \"C:\\Android\\Workspace\\TuneURL\\app\\.cxx\\cmake\\debug\\x86\" native-lib",
+      "buildCommandComponents": [
+        "C:\\Users\\PC\\AppData\\Local\\Android\\Sdk\\cmake\\3.10.2.4988404\\bin\\ninja.exe",
+        "-C",
+        "C:\\Android\\Workspace\\TuneURL\\app\\.cxx\\cmake\\debug\\x86",
+        "native-lib"
+      ],
       "buildType": "debug",
-      "toolchain": "2397439172",
       "abi": "x86",
       "artifactName": "native-lib",
-      "files": [
-        {
-          "src": "C:\\Android\\Workspace\\TuneURL\\app\\src\\main\\cpp\\native-lib.cpp",
-          "flagsOrdinal": 1,
-          "workingDirectoryOrdinal": 0
-        },
-        {
-          "src": "C:\\Android\\Workspace\\TuneURL\\app\\src\\main\\cpp\\Fingerprint.cpp",
-          "flagsOrdinal": 1,
-          "workingDirectoryOrdinal": 0
-        },
-        {
-          "src": "C:\\Android\\Workspace\\TuneURL\\app\\src\\main\\cpp\\FingerprintManager.cpp",
-          "flagsOrdinal": 1,
-          "workingDirectoryOrdinal": 0
-        },
-        {
-          "src": "C:\\Android\\Workspace\\TuneURL\\app\\src\\main\\cpp\\RobustIntensityProcessor.cpp",
-          "flagsOrdinal": 1,
-          "workingDirectoryOrdinal": 0
-        },
-        {
-          "src": "C:\\Android\\Workspace\\TuneURL\\app\\src\\main\\cpp\\ArrayRankFloat.cpp",
-          "flagsOrdinal": 1,
-          "workingDirectoryOrdinal": 0
-        },
-        {
-          "src": "C:\\Android\\Workspace\\TuneURL\\app\\src\\main\\cpp\\FingerprintProperties.cpp",
-          "flagsOrdinal": 1,
-          "workingDirectoryOrdinal": 0
-        },
-        {
-          "src": "C:\\Android\\Workspace\\TuneURL\\app\\src\\main\\cpp\\Spectrogram.cpp",
-          "flagsOrdinal": 1,
-          "workingDirectoryOrdinal": 0
-        },
-        {
-          "src": "C:\\Android\\Workspace\\TuneURL\\app\\src\\main\\cpp\\FastFourierTransform.cpp",
-          "flagsOrdinal": 1,
-          "workingDirectoryOrdinal": 0
-        },
-        {
-          "src": "C:\\Android\\Workspace\\TuneURL\\app\\src\\main\\cpp\\WindowFunction.cpp",
-          "flagsOrdinal": 1,
-          "workingDirectoryOrdinal": 0
-        },
-        {
-          "src": "C:\\Android\\Workspace\\TuneURL\\app\\src\\main\\cpp\\FingerprintSimilarityComputer.cpp",
-          "flagsOrdinal": 1,
-          "workingDirectoryOrdinal": 0
-        },
-        {
-          "src": "C:\\Android\\Workspace\\TuneURL\\app\\src\\main\\cpp\\MapRankInteger.cpp",
-          "flagsOrdinal": 1,
-          "workingDirectoryOrdinal": 0
-        },
-        {
-          "src": "C:\\Android\\Workspace\\TuneURL\\app\\src\\main\\cpp\\PairManager.cpp",
-          "flagsOrdinal": 1,
-          "workingDirectoryOrdinal": 0
-        },
-        {
-          "src": "C:\\Android\\Workspace\\TuneURL\\app\\src\\main\\cpp\\QuickSortInteger.cpp",
-          "flagsOrdinal": 1,
-          "workingDirectoryOrdinal": 0
-        }
-      ],
-      "headers": [],
       "output": "C:\\Android\\Workspace\\TuneURL\\app\\build\\intermediates\\cmake\\debug\\obj\\x86\\libnative-lib.so",
-      "runtimeFiles": [
-        "C:\\Android\\Old_NDKs\\android-ndk-r17c\\sources\\cxx-stl\\llvm-libc++\\libs\\x86\\libc++_static.a",
-        "C:\\Android\\Old_NDKs\\android-ndk-r17c\\sources\\cxx-stl\\llvm-libc++\\libs\\x86\\libc++abi.a"
-      ]
+      "runtimeFiles": []
     }
   },
-  "toolchains": {
-    "2397439172": {
-      "cppCompilerExecutable": "C:\\Android\\Old_NDKs\\android-ndk-r17c\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang++.exe"
-    }
-  },
+  "toolchains": {},
   "cFileExtensions": [],
   "cppFileExtensions": [
     "cpp"

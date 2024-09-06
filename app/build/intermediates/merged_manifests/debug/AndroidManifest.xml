@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.dekidea.tuneurl"
-    android:versionCode="41"
-    android:versionName="1.0.41" >
+    android:versionCode="43"
+    android:versionName="1.0.43" >
 
     <uses-sdk
         android:minSdkVersion="27"
-        android:targetSdkVersion="30" />
+        android:targetSdkVersion="31" />
     <!-- suppress AndroidElementNotAllowed -->
     <queries>
         <intent>
@@ -46,6 +46,7 @@
         <activity
             android:name="com.dekidea.tuneurl.activity.MainActivity"
             android:allowTaskReparenting="false"
+            android:exported="true"
             android:label="@string/app_name"
             android:launchMode="singleTask"
             android:screenOrientation="portrait"
@@ -59,6 +60,7 @@
         <activity
             android:name="com.dekidea.tuneurl.activity.AlertActivity"
             android:allowTaskReparenting="true"
+            android:exported="false"
             android:label="@string/news_alert_label"
             android:launchMode="singleTask"
             android:screenOrientation="portrait"
@@ -66,36 +68,49 @@
 
         <service
             android:name="com.dekidea.tuneurl.service.SoundListenerService"
-            android:exported="true"
+            android:exported="false"
             android:permission="android.permission.RECORD_AUDIO" />
         <service
             android:name="com.dekidea.tuneurl.service.MediaProjectionServer"
+            android:exported="false"
             android:foregroundServiceType="mediaProjection" />
-        <service android:name="com.dekidea.tuneurl.service.APIService" />
-        <service android:name="com.dekidea.tuneurl.service.AutorunService" />
+        <service
+            android:name="com.dekidea.tuneurl.service.APIService"
+            android:exported="false" />
+        <service
+            android:name="com.dekidea.tuneurl.service.AutorunService"
+            android:exported="false" />
         <service
             android:name="com.dekidea.tuneurl.service.AutorunJobService"
-            android:exported="true"
+            android:exported="false"
             android:permission="android.permission.BIND_JOB_SERVICE" />
 
-        <receiver android:name="com.dekidea.tuneurl.receiver.ConnectivityChangeReceiver" >
+        <receiver
+            android:name="com.dekidea.tuneurl.receiver.ConnectivityChangeReceiver"
+            android:exported="false" >
             <intent-filter>
                 <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
             </intent-filter>
         </receiver>
-        <receiver android:name="com.dekidea.tuneurl.receiver.BootCompletedReceiver" >
+        <receiver
+            android:name="com.dekidea.tuneurl.receiver.BootCompletedReceiver"
+            android:exported="false" >
             <intent-filter>
                 <action android:name="android.intent.action.BOOT_COMPLETED" />
 
                 <category android:name="android.intent.category.HOME" />
             </intent-filter>
         </receiver>
-        <receiver android:name="com.dekidea.tuneurl.receiver.PhoneStateReceiver" >
+        <receiver
+            android:name="com.dekidea.tuneurl.receiver.PhoneStateReceiver"
+            android:exported="false" >
             <intent-filter android:priority="999" >
                 <action android:name="android.intent.action.PHONE_STATE" />
             </intent-filter>
         </receiver>
-        <receiver android:name="com.dekidea.tuneurl.receiver.HeadsetReceiver" />
+        <receiver
+            android:name="com.dekidea.tuneurl.receiver.HeadsetReceiver"
+            android:exported="false" />
 
         <provider
             android:name="android.arch.lifecycle.ProcessLifecycleOwnerInitializer"

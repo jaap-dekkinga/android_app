@@ -1,13 +1,17 @@
 {
   "abi": "X86",
-  "abiPlatformVersion": 27,
-  "buildSettings": {
-    "environmentVariables": []
+  "info": {
+    "abi": "X86",
+    "bitness": 32,
+    "deprecated": false,
+    "default": true
   },
+  "originalCxxBuildFolder": "C:\\Android\\Workspace\\TuneURL\\app\\.cxx\\cmake\\debug\\x86",
+  "cxxBuildFolder": "C:\\Android\\Workspace\\TuneURL\\app\\.cxx\\cmake\\debug\\x86",
+  "abiPlatformVersion": 27,
   "cmake": {
-    "cmakeArtifactsBaseFolder": "C:\\Android\\Workspace\\TuneURL\\app\\.cxx\\cmake\\debug\\x86",
-    "cmakeServerLogFile": "C:\\Android\\Workspace\\TuneURL\\app\\.cxx\\cmake\\debug\\x86\\cmake_server_log.txt",
     "cmakeWrappingBaseFolder": "C:\\Android\\Workspace\\TuneURL\\app\\.cxx\\cxx\\debug\\x86",
+    "cmakeArtifactsBaseFolder": "C:\\Android\\Workspace\\TuneURL\\app\\.cxx\\cmake\\debug\\x86",
     "effectiveConfiguration": {
       "name": "traditional-android-studio-cmake-environment",
       "description": "Composite reified CMakeSettings configuration",
@@ -64,6 +68,10 @@
           "value": "C:\\Android\\Workspace\\TuneURL\\app\\build\\intermediates\\cmake\\debug\\obj\\x86"
         },
         {
+          "name": "CMAKE_RUNTIME_OUTPUT_DIRECTORY",
+          "value": "C:\\Android\\Workspace\\TuneURL\\app\\build\\intermediates\\cmake\\debug\\obj\\x86"
+        },
+        {
           "name": "CMAKE_MAKE_PROGRAM",
           "value": "C:\\Users\\PC\\AppData\\Local\\Android\\Sdk\\cmake\\3.10.2.4988404\\bin\\ninja.exe"
         },
@@ -76,46 +84,72 @@
           "value": "27"
         }
       ]
-    }
+    },
+    "cmakeServerLogFile": "C:\\Android\\Workspace\\TuneURL\\app\\.cxx\\cmake\\debug\\x86\\cmake_server_log.txt"
   },
-  "cxxBuildFolder": "C:\\Android\\Workspace\\TuneURL\\app\\.cxx\\cmake\\debug\\x86",
-  "info": {
-    "abi": "X86",
-    "bitness": 32,
-    "deprecated": false,
-    "default": true
-  },
-  "originalCxxBuildFolder": "C:\\Android\\Workspace\\TuneURL\\app\\.cxx\\cmake\\debug\\x86",
   "variant": {
     "buildSystemArgumentList": [],
-    "buildTargetSet": [],
     "cFlagsList": [],
-    "cmakeSettingsConfiguration": "android-gradle-plugin-predetermined-name",
     "cppFlagsList": [
       "-frtti -fexceptions"
     ],
+    "variantName": "debug",
+    "objFolder": "C:\\Android\\Workspace\\TuneURL\\app\\build\\intermediates\\cmake\\debug\\obj",
+    "soFolder": "C:\\Android\\Workspace\\TuneURL\\app\\build\\intermediates\\cmake\\debug\\lib",
     "isDebuggableEnabled": true,
+    "validAbiList": [
+      "ARMEABI_V7A",
+      "ARM64_V8A",
+      "X86",
+      "X86_64"
+    ],
+    "buildTargetSet": [],
+    "implicitBuildTargetSet": [],
+    "cmakeSettingsConfiguration": "android-gradle-plugin-predetermined-name",
     "module": {
-      "buildSystem": "CMAKE",
-      "cmake": {
-        "cmakeExe": "C:\\Users\\PC\\AppData\\Local\\Android\\Sdk\\cmake\\3.10.2.4988404\\bin\\cmake.exe",
-        "minimumCmakeVersion": "3.10.2",
-        "ninjaExe": "C:\\Users\\PC\\AppData\\Local\\Android\\Sdk\\cmake\\3.10.2.4988404\\bin\\ninja.exe"
-      },
-      "cmakeToolchainFile": "C:\\Android\\Old_NDKs\\android-ndk-r17c\\build\\cmake\\android.toolchain.cmake",
       "cxxFolder": "C:\\Android\\Workspace\\TuneURL\\app\\.cxx",
-      "gradleModulePathName": ":app",
+      "splitsAbiFilterSet": [],
       "intermediatesFolder": "C:\\Android\\Workspace\\TuneURL\\app\\build\\intermediates",
-      "makeFile": "C:\\Android\\Workspace\\TuneURL\\app\\src\\main\\cpp\\CMakeLists.txt",
-      "moduleBuildFile": "C:\\Android\\Workspace\\TuneURL\\app\\build.gradle",
+      "gradleModulePathName": ":app",
       "moduleRootFolder": "C:\\Android\\Workspace\\TuneURL\\app",
+      "moduleBuildFile": "C:\\Android\\Workspace\\TuneURL\\app\\build.gradle",
+      "makeFile": "C:\\Android\\Workspace\\TuneURL\\app\\src\\main\\cpp\\CMakeLists.txt",
+      "buildSystem": "CMAKE",
+      "ndkFolder": "C:\\Android\\Old_NDKs\\android-ndk-r17c",
+      "ndkVersion": "17.2.4988734",
+      "ndkSupportedAbiList": [
+        "ARMEABI_V7A",
+        "ARM64_V8A",
+        "X86",
+        "X86_64"
+      ],
       "ndkDefaultAbiList": [
         "ARMEABI_V7A",
         "ARM64_V8A",
         "X86",
         "X86_64"
       ],
-      "ndkFolder": "C:\\Android\\Old_NDKs\\android-ndk-r17c",
+      "ndkDefaultStl": "LIBCXX_STATIC",
+      "ndkMetaPlatforms": {
+        "min": 14,
+        "max": 28,
+        "aliases": {
+          "20": 19,
+          "25": 24,
+          "J": 16,
+          "J-MR1": 17,
+          "J-MR2": 18,
+          "K": 19,
+          "L": 21,
+          "L-MR1": 22,
+          "M": 23,
+          "N": 24,
+          "N-MR1": 24,
+          "O": 26,
+          "O-MR1": 27,
+          "P": 28
+        }
+      },
       "ndkMetaAbiList": [
         {
           "abi": "ARMEABI_V7A",
@@ -142,45 +176,15 @@
           "default": true
         }
       ],
-      "ndkMetaPlatforms": {
-        "min": 14,
-        "max": 28,
-        "aliases": {
-          "20": 19,
-          "25": 24,
-          "J": 16,
-          "J-MR1": 17,
-          "J-MR2": 18,
-          "K": 19,
-          "L": 21,
-          "L-MR1": 22,
-          "M": 23,
-          "N": 24,
-          "N-MR1": 24,
-          "O": 26,
-          "O-MR1": 27,
-          "P": 28
-        }
+      "originalCmakeToolchainFile": "C:\\Android\\Old_NDKs\\android-ndk-r17c\\build\\cmake\\android.toolchain.cmake",
+      "cmakeToolchainFile": "C:\\Android\\Old_NDKs\\android-ndk-r17c\\build\\cmake\\android.toolchain.cmake",
+      "cmake": {
+        "isValidCmakeAvailable": true,
+        "cmakeExe": "C:\\Users\\PC\\AppData\\Local\\Android\\Sdk\\cmake\\3.10.2.4988404\\bin\\cmake.exe",
+        "minimumCmakeVersion": "3.10.2",
+        "ninjaExe": "C:\\Users\\PC\\AppData\\Local\\Android\\Sdk\\cmake\\3.10.2.4988404\\bin\\ninja.exe",
+        "isPreferCmakeFileApiEnabled": true
       },
-      "ndkSupportedAbiList": [
-        "ARMEABI_V7A",
-        "ARM64_V8A",
-        "X86",
-        "X86_64"
-      ],
-      "ndkDefaultStl": "GNUSTL_STATIC",
-      "ndkVersion": "17.2.4988734",
-      "project": {
-        "compilerSettingsCacheFolder": "C:\\Android\\Workspace\\TuneURL\\.cxx",
-        "cxxFolder": "C:\\Android\\Workspace\\TuneURL\\.cxx",
-        "isBuildOnlyTargetAbiEnabled": true,
-        "isCmakeBuildCohabitationEnabled": false,
-        "isNativeCompilerSettingsCacheEnabled": false,
-        "rootBuildGradleFolder": "C:\\Android\\Workspace\\TuneURL",
-        "sdkFolder": "C:\\Users\\PC\\AppData\\Local\\Android\\Sdk",
-        "isPrefabEnabled": false
-      },
-      "splitsAbiFilterSet": [],
       "stlSharedObjectMap": {
         "GNUSTL_SHARED": {
           "ARMEABI_V7A": "C:\\Android\\Old_NDKs\\android-ndk-r17c\\sources\\cxx-stl\\gnu-libstdc++\\4.9\\libs\\armeabi-v7a\\libgnustl_shared.so",
@@ -205,18 +209,24 @@
         },
         "STLPORT_STATIC": {},
         "SYSTEM": {}
-      }
+      },
+      "project": {
+        "rootBuildGradleFolder": "C:\\Android\\Workspace\\TuneURL",
+        "cxxFolder": "C:\\Android\\Workspace\\TuneURL\\.cxx",
+        "compilerSettingsCacheFolder": "C:\\Android\\Workspace\\TuneURL\\.cxx",
+        "sdkFolder": "C:\\Users\\PC\\AppData\\Local\\Android\\Sdk",
+        "isNativeCompilerSettingsCacheEnabled": false,
+        "isBuildOnlyTargetAbiEnabled": true,
+        "isCmakeBuildCohabitationEnabled": false,
+        "isPrefabEnabled": false,
+        "isV2NativeModelEnabled": true
+      },
+      "nativeBuildOutputLevel": "QUIET"
     },
-    "objFolder": "C:\\Android\\Workspace\\TuneURL\\app\\build\\intermediates\\cmake\\debug\\obj",
-    "variantName": "debug",
-    "validAbiList": [
-      "ARMEABI_V7A",
-      "ARM64_V8A",
-      "X86",
-      "X86_64"
-    ],
-    "prefabDirectory": "C:\\Android\\Workspace\\TuneURL\\app\\.cxx\\cmake\\debug\\prefab",
-    "prefabPackageDirectoryList": []
+    "prefabDirectory": "C:\\Android\\Workspace\\TuneURL\\app\\.cxx\\cmake\\debug\\prefab"
+  },
+  "buildSettings": {
+    "environmentVariables": []
   },
   "prefabFolder": "C:\\Android\\Workspace\\TuneURL\\app\\.cxx\\cmake\\debug\\prefab\\x86"
 }
