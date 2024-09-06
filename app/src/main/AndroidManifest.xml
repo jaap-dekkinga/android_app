@@ -25,6 +25,12 @@
     <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
     <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
 
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS"/>
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_SPECIAL_USE" />
+
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_MEDIA_PROJECTION"/>
+
     <application
         android:name=".App"
         android:allowBackup="false"
@@ -34,21 +40,21 @@
         <!-- android:requestLegacyExternalStorage="true" -->
         <activity
             android:name=".activity.MainActivity"
-            android:exported="true"
             android:allowTaskReparenting="false"
             android:label="@string/app_name"
             android:launchMode="singleTask"
             android:screenOrientation="portrait"
-            android:theme="@style/Theme.AppCompat.NoActionBar">
+            android:theme="@style/Theme.AppCompat.NoActionBar"
+            android:exported="true">
             <intent-filter android:label="@string/app_name">
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
         <activity
             android:name=".activity.AlertActivity"
-            android:exported="false"
             android:allowTaskReparenting="true"
             android:label="@string/news_alert_label"
             android:launchMode="singleTask"
@@ -57,18 +63,29 @@
 
         <service
             android:name=".service.SoundListenerService"
+            android:enabled="true"
             android:exported="false"
-            android:permission="android.permission.RECORD_AUDIO" />
+            android:permission="android.permission.RECORD_AUDIO"
+            android:foregroundServiceType="specialUse">
+        </service>
+
         <service
             android:name=".service.MediaProjectionServer"
+            android:enabled="true"
             android:exported="false"
             android:foregroundServiceType="mediaProjection" />
+
         <service android:name=".service.APIService"
+            android:enabled="true"
             android:exported="false"/>
+
         <service android:name=".service.AutorunService"
+            android:enabled="true"
             android:exported="false"/>
+
         <service
             android:name=".service.AutorunJobService"
+            android:enabled="true"
             android:exported="false"
             android:permission="android.permission.BIND_JOB_SERVICE"></service>
 
@@ -78,6 +95,7 @@
                 <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
             </intent-filter>
         </receiver>
+
         <receiver android:name=".receiver.BootCompletedReceiver"
             android:exported="false">
             <intent-filter>
@@ -95,7 +113,7 @@
         </receiver>
 
         <receiver android:name=".receiver.HeadsetReceiver"
-            android:exported="false"></receiver>
+            android:exported="false"/>
 
     </application>
 

@@ -157,7 +157,7 @@ public class MainActivity extends FragmentActivity implements Constants {
             resume();
         }
 
-        registerReceiver(mAppStatusReceiver, mIntentFilter);
+        registerReceiver(mAppStatusReceiver, mIntentFilter, Context. RECEIVER_NOT_EXPORTED);
     }
 
 
